@@ -35,4 +35,23 @@ public class DeletePass {
             }
         }
     }
+    public void DeleteAll(){
+        connect.connection();
+        if (connect.connect!=null){
+            try{
+                String Q = "DELETE FROM password_garage";
+                PreparedStatement statement = connect.connect.prepareStatement(Q);
+                int R = statement.executeUpdate();
+                if (R > 0){
+                    message = "Delete All successfully";
+                }
+                else {
+                    message = "Delete all failed";
+                }
+            connect.connect.close();
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
+        }
+    }
 }
