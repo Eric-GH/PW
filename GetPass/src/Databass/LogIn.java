@@ -1,11 +1,22 @@
 package Databass;
 
+
+/**
+ * Author: Hao Li
+ * Date: 05/03,2019
+ */
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class LogIn {
     Connect connect = new Connect();
     public String message = null;
+
+    /**
+     * Let user log in their account
+     * @param username user name for log in
+     * @param password user password for log in
+     */
     public void login(String username, String password){
         connect.connection();
         if (connect.connect !=null){
@@ -29,10 +40,5 @@ public class LogIn {
                 e.printStackTrace();
             }
         }
-    }
-
-    public static void main(String[] args){
-        LogIn logIn = new LogIn();
-        logIn.login("eric","lns94");
     }
 }
