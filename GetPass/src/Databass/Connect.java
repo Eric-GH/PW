@@ -1,5 +1,8 @@
 package Databass;
-
+/**
+ * Author: Hao Li
+ * Date: 04/26,2019
+ */
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -31,11 +34,4 @@ public class Connect {
         System.out.println("Connection Successful");
         return connect;
     }
-/*
-    public static void main(String[] args){
-        Connect c = new Connect();
-        c.connection();
-    }
-
- */
 }
