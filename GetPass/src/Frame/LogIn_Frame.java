@@ -1,8 +1,12 @@
 package Frame;
 
+/**
+ * Author: Hao Li
+ * Date: 04/24,2019
+ */
+
 import Databass.LogIn;
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -27,6 +31,10 @@ public class LogIn_Frame extends Application {
     Button Reg = new Button("REGISTRATION");
 
 
+    /**
+     * This function define the shape of all elements on the login frame
+     * AND add actions on each elements
+     */
     void setLogIn(){
         name.setPrefSize(90,20);
         pass.setPrefSize(90,20);
@@ -76,14 +84,16 @@ public class LogIn_Frame extends Application {
         });
 
         Reg.setOnAction(event -> {
-            
+
         });
 
     }
 
 
-
-
+    /**
+     * This is main frame of Login, defined the size and margin
+     * @return the GridPane
+     */
     GridPane mainPane(){
         GridPane gridPane = new GridPane();
         /*
@@ -133,6 +143,10 @@ public class LogIn_Frame extends Application {
         LogInWindow.show();
     }
 
+    /**
+     * Launch the Frame
+     * @param args the frame
+     */
     public static void main(String[] args){
         launch(args);
     }
