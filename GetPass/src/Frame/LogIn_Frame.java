@@ -50,7 +50,7 @@ public class LogIn_Frame extends Application {
             if (logInDB.message.equals("True")){
                 MainFrame frame = new MainFrame();
                 try {
-                    frame.start(frame.windows);
+                    frame.windows.show();
                 }catch (Exception ex){
                     ex.printStackTrace();
                 }
@@ -70,7 +70,7 @@ public class LogIn_Frame extends Application {
                     if (logInDB.message.equals("True")){
                         MainFrame frame = new MainFrame();
                         try {
-                            frame.start(frame.windows);
+                            frame.windows.show();
                         }catch (Exception ex){
                             ex.printStackTrace();
                         }
