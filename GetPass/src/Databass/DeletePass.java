@@ -24,10 +24,10 @@ public class DeletePass {
                 statement.setInt(1,pass_id);
                 int result = statement.executeUpdate();
                 if (result > 0) {
-                    message = "Delete successfully";
+                    message = "true";
                 }
                 else {
-                    message = "Delete failed";
+                    message = "false";
                 }
                 connect.connect.close();
             }catch (Exception e){
@@ -35,18 +35,19 @@ public class DeletePass {
             }
         }
     }
-    public void DeleteAll(){
+    public void DeleteAll(int currentID){
         connect.connection();
         if (connect.connect!=null){
             try{
-                String Q = "DELETE FROM password_garage";
+                String Q = "DELETE FROM password_garage WHERE user_manage_id = ?";
                 PreparedStatement statement = connect.connect.prepareStatement(Q);
+                statement.setInt(1,currentID);
                 int R = statement.executeUpdate();
                 if (R > 0){
-                    message = "Delete All successfully";
+                    message = "true";
                 }
                 else {
-                    message = "Delete all failed";
+                    message = "false";
                 }
             connect.connect.close();
             }catch (Exception ex){

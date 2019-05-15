@@ -1,5 +1,8 @@
 package Frame.SecondaryFrames;
-
+/**
+ * Author: Hao Li
+ * Date: 05/07,2019
+ */
 import Databass.DeletePass;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;

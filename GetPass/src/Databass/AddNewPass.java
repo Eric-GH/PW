@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 
 public class AddNewPass {
     Connect connect = new Connect();
-    String message = null;
+    public String message = null;
 
 
     /**
@@ -19,7 +19,7 @@ public class AddNewPass {
      * @param nameOFpass user name of the password
      * @param thePassword // password
      */
-    void add(int user_id,String address, String nameOFpass, String thePassword){
+    public void add(int user_id,String address, String nameOFpass, String thePassword){
         String query;
         connect.connection();
         if (connect.connect!=null){
@@ -32,11 +32,11 @@ public class AddNewPass {
                 statement.setString(4,thePassword);
                 int result = statement.executeUpdate();
                 if (result > 0){
-                    message = "Adding successful";
+                    message = "true";
 
                 }
                 else {
-                    message= " adding fail!!!";
+                    message= "false";
                 }
                 connect.connect.close();
             }catch (Exception e){

@@ -1,56 +1,58 @@
 package Frame.SecondaryFrames;
+/**
+ * Author: Hao Li
+ * Date: 05/11,2019
+ */
 
 import javafx.geometry.Insets;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.HBox;
 
 public class LineView extends HBox {
-    Label name_view = new Label("Name:");
-    Label username_view = new Label("Username:");
-    Label password_view = new Label("Password:");
-    TextArea name_area = new TextArea();
-    TextArea user_area = new TextArea();
-    TextArea pass_area = new TextArea();
+    public TextArea name_area = new TextArea();
+    public TextArea user_area = new TextArea();
+    public TextArea pass_area = new TextArea();
 
-    LineView(){
-        this.setPrefSize(600,25);
-        name_view.setPrefSize(40,20);
-        username_view.setPrefSize(70,20);
-        password_view.setPrefSize(70,20);
-        name_area.setPrefSize(120,20);
-        pass_area.setPrefSize(120,20);
-        user_area.setPrefSize(120,20);
+    /**
+     * Construct to set up the elements in LineView frame
+     */
+    public LineView(){
+        this.setPrefSize(500,25);
+        this.setMaxSize(500,25);
+        name_area.setPrefSize(150,20);
+        pass_area.setPrefSize(150,20);
+        user_area.setPrefSize(150,20);
         name_area.setMaxHeight(20);
         user_area.setMaxHeight(20);
         pass_area.setMaxHeight(20);
-        HBox.setMargin(username_view,new Insets(0,0,0,10));
-        HBox.setMargin(password_view,new Insets(0,0,0,10));
-        this.setPadding(new Insets(3,0,3,20));
-        this.getChildren().addAll(name_view,name_area,username_view,user_area,password_view,pass_area);
+        name_area.setMinHeight(20);
+        user_area.setMinHeight(20);
+        pass_area.setMinHeight(20);
+        name_area.setWrapText(true);
+        user_area.setWrapText(true);
+        pass_area.setWrapText(true);
+        user_area.setEditable(false);
+        name_area.setEditable(false);
+        pass_area.setEditable(false);
+        HBox.setMargin(name_area,new Insets(0,0,0,15));
+        HBox.setMargin(user_area,new Insets(0,0,0,10));
+        HBox.setMargin(pass_area,new Insets(0,0,0,10));
+        this.setPadding(new Insets(3,0,3,0));
+        this.getChildren().addAll(name_area,user_area,pass_area);
     }
 
-    public void setName_view(Label name_view) {
-        this.name_view = name_view;
+    /*
+      Setter for elements in LineView
+     */
+    public void setName_area(String name) {
+        this.name_area.setText(name);
     }
 
-    public void setUsername_view(Label username_view) {
-        this.username_view = username_view;
+    public void setUser_area(String user) {
+        this.user_area.setText(user);
     }
 
-    public void setPassword_view(Label password_view) {
-        this.password_view = password_view;
-    }
-
-    public void setName_area(TextArea name_area) {
-        this.name_area = name_area;
-    }
-
-    public void setUser_area(TextArea user_area) {
-        this.user_area = user_area;
-    }
-
-    public void setPass_area(TextArea pass_area) {
-        this.pass_area = pass_area;
+    public void setPass_area(String pass) {
+        this.pass_area.setText(pass);
     }
 }

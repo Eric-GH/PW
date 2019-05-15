@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 public class LogIn {
     Connect connect = new Connect();
     public String message = null;
+    public int user_id = 0;
 
     /**
      * Let user log in their account
@@ -29,13 +30,14 @@ public class LogIn {
                 if (!rs.next()){
                     message = "Wrong user name or password";
                     System.out.println(message);
-                    connect.connect.close();
+
                 }
                 else {
                     message = "True";
-                    System.out.println(message);
-                    connect.connect.close();
+                    user_id = rs.getInt(1);
+
                 }
+                connect.connect.close();
             }catch (Exception e){
                 e.printStackTrace();
             }

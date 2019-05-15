@@ -1,5 +1,10 @@
 package Frame.SecondaryFrames;
 
+/**
+ * Author: Hao Li
+ * Date: 05/07,2019
+ */
+
 import Databass.AddNewPass;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -121,6 +126,9 @@ public class Add {
         ADD actions on each button
          */
         cancel.setOnAction(e->{
+            address_TX.setText(null);
+            user_TX.setText(null);
+            password_TX.setText(null);
             Addwindows.close();
         });
         submit.setOnAction(e->{
@@ -129,6 +137,9 @@ public class Add {
                 addNewPass.add(current_user_id,this.address_TX.getText(),this.user_TX.getText(),this.password_TX.getText());
                 if (addNewPass.message.equals("true")){
                     warning.setText("Adding Successfully");
+                    address_TX.setText(null);
+                    user_TX.setText(null);
+                    password_TX.setText(null);
                     Addwindows.close();
                     tips = new Tip();
                     tips.tipMessage.setText("successful");

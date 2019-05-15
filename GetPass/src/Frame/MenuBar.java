@@ -1,4 +1,12 @@
 package Frame;
+
+/**
+ * Author: Hao Li
+ * Date: 05/03,2019
+ */
+
+import Frame.SecondaryFrames.Add;
+import Frame.SecondaryFrames.Delete;
 import javafx.geometry.Insets;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
@@ -6,6 +14,9 @@ import javafx.scene.layout.HBox;
 
 public class MenuBar extends HBox {
 
+    public int menu_user_id = 0;
+    public Add add = new Add();
+    public Delete delete = new Delete();
     MenuBar(){
         this.setPrefHeight(25);
         this.setPrefWidth(500);
@@ -25,12 +36,18 @@ public class MenuBar extends HBox {
 
     MenuItem AddNew(){
         MenuItem addNew = new MenuItem("Add New Password");
+        addNew.setOnAction(e->{
+            add.Addwindows.show();
+        });
         return addNew;
     }
 
 
     MenuItem DeleteAll(){
         MenuItem deleteAll = new MenuItem("Delete all Passwords");
+        deleteAll.setOnAction(e->{
+            delete.delWindows.show();
+        });
         return deleteAll;
     }
 

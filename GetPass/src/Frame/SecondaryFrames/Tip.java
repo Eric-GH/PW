@@ -1,5 +1,8 @@
 package Frame.SecondaryFrames;
-
+/**
+ * Author: Hao Li
+ * Date: 05/07,2019
+ */
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -26,7 +29,7 @@ public class Tip {
          */
         tipVBox.setPrefSize(200,100);
         tipMessage.setPrefSize(200,70);
-        confirm.setPrefSize(80,30);
+        confirm.setPrefSize(80,25);
         tipMessage.setAlignment(Pos.CENTER);
         VBox.setMargin(confirm,new Insets(0,0,0,60));
 
@@ -43,5 +46,7 @@ public class Tip {
         tipVBox.getChildren().addAll(tipMessage,confirm);
         return tipVBox;
     }
+
+
 
 }

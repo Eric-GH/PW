@@ -29,7 +29,7 @@ public class LogIn_Frame extends Application {
     PasswordField pass_TX = new PasswordField();
     Button submit = new Button("SUBMIT");
     Button Reg = new Button("REGISTRATION");
-
+    MainFrame frame;
 
     /**
      * This function define the shape of all elements on the login frame
@@ -48,9 +48,17 @@ public class LogIn_Frame extends Application {
         submit.setOnAction(e->{
             logInDB.login(name_TX.getText(),pass_TX.getText());
             if (logInDB.message.equals("True")){
-                MainFrame frame = new MainFrame();
+
                 try {
+                    frame = new MainFrame();
+                    frame.setCurrent_user(logInDB.user_id);
+                    //System.out.println(frame.current_user);
+                    frame.menu.add.current_user_id = logInDB.user_id;
+                    frame.menu.delete.delete_current_user_id = logInDB.user_id;
+                    frame.top.functionBar_current_userID = logInDB.user_id;
+                    frame.setID(logInDB.user_id);
                     frame.windows.show();
+
                 }catch (Exception ex){
                     ex.printStackTrace();
                 }
@@ -68,8 +76,14 @@ public class LogIn_Frame extends Application {
                 if (!pass_TX.getText().isEmpty()){
                     logInDB.login(name_TX.getText(),pass_TX.getText());
                     if (logInDB.message.equals("True")){
-                        MainFrame frame = new MainFrame();
                         try {
+                            frame = new MainFrame();
+                            frame.setCurrent_user(logInDB.user_id);
+                            frame.menu.add.current_user_id = logInDB.user_id;
+                            frame.menu.delete.delete_current_user_id = logInDB.user_id;
+                            frame.top.functionBar_current_userID = logInDB.user_id;
+                            frame.setID(logInDB.user_id);
+                            //System.out.println(frame.current_user);
                             frame.windows.show();
                         }catch (Exception ex){
                             ex.printStackTrace();

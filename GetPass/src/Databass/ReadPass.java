@@ -8,11 +8,11 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class ReadPass {
-    ArrayList<MyPassword> list;
-    ArrayList<MyPassword> searchList;
+    public ArrayList<MyPassword> list;
+    public ArrayList<MyPassword> searchList;
     Connect connect = new Connect();
 
-    void ReadAll(int id){
+    public void ReadAll(int id){
         connect.connection();
         if (connect.connect!=null){
             try{
@@ -31,7 +31,7 @@ public class ReadPass {
         }
     }
 
-    void SearchRead(int id,String names){
+    public void SearchRead(int id,String names){
         connect.connection();
         String searchName = "%"+names+"%";
         if (connect.connect!=null){
@@ -50,5 +50,11 @@ public class ReadPass {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static void main(String[] args){
+        ReadPass readPass = new ReadPass();
+        readPass.ReadAll(1);
+        System.out.println(readPass.list.size());
     }
 }

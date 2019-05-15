@@ -17,7 +17,7 @@ public class AddNewUser {
      * @param name user name
      * @param pass user password
      */
-    void addNewUser(String name,String pass){
+    public void addNewUser(String name,String pass){
         String query;
         PreparedStatement statement;
         connect.connection();
