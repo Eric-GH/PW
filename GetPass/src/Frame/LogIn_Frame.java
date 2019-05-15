@@ -5,7 +5,9 @@ package Frame;
  * Date: 04/24,2019
  */
 
+import Databass.AddNewUser;
 import Databass.LogIn;
+import Frame.SecondaryFrames.Registration;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -30,6 +32,7 @@ public class LogIn_Frame extends Application {
     Button submit = new Button("SUBMIT");
     Button Reg = new Button("REGISTRATION");
     MainFrame frame;
+    Registration registration;
 
     /**
      * This function define the shape of all elements on the login frame
@@ -86,7 +89,8 @@ public class LogIn_Frame extends Application {
         });
 
         Reg.setOnAction(event -> {
-
+            registration = new Registration();
+            registration.regWindows.show();
         });
 
     }

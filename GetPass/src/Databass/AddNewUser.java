@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 
 public class AddNewUser {
     Connect connect = new Connect();
-    String message = null;
+    public String message = null;
 
     /**
      * Add new user to the system
@@ -36,14 +36,14 @@ public class AddNewUser {
                     statement.setString(2,pass);
                     int result = statement.executeUpdate();
                     if (result > 0){
-                        message = "Adding user successfully";
+                        message = "TRUE";
                     }
                     else {
-                        message = "Adding user failed!";
+                        message = "FALSE";
                     }
                 }
                 else {
-                    message = "This user name has been used";
+                    message = "USED";
                 }
                 connect.connect.close();
             }catch (Exception e){
