@@ -19,7 +19,7 @@ public class MainFrame {
     public ViewPane bot;
     public MenuBar menu;
     public int start=0;
-    public int end = 17;
+    public int end = 14;
     public boolean endFlag = false;
     //public ArrayList<MyPassword> MainList = new ArrayList<>();
 
@@ -45,10 +45,10 @@ public class MainFrame {
         });
 
         this.top.right.setOnAction(er->{
-            start = start+17;
+            start = start+14;
             DisableCheck();
-            if (bot.viewList.size()-start>17){
-                end = end + 17;
+            if (bot.viewList.size()-start>14){
+                end = end + 14;
                 bot.setCenter(bot.ShowOnPage(start,end));
             }
             else { //bot.readPass.list.size()-start<17
@@ -61,15 +61,15 @@ public class MainFrame {
         });
         this.top.left.setOnAction(el->{
             if (!endFlag){
-                start = start-17;
-                end = end -17;
+                start = start-14;
+                end = end -14;
                 bot.setCenter(bot.ShowOnPage(start,end));
 
             }
             else {//endFlag = true
                 int temp = this.bot.viewList.size();
                 end = temp-(temp-start);
-                start=start -17;
+                start=start -14;
                 bot.setCenter(bot.ShowOnPage(start,end));
                 endFlag = false;
             }
@@ -80,10 +80,8 @@ public class MainFrame {
     }
 
     private void setFirstFrame(){
-        firstFrame.setPrefWidth(500);
+        firstFrame.setPrefWidth(600);
         firstFrame.setPrefHeight(600);
-        //System.out.println(current_user);
-        //System.out.println(menu.menu_user_id);
         firstFrame.getChildren().addAll(menu,top,bot);
     }
 
@@ -96,13 +94,13 @@ public class MainFrame {
     }
 
     void DisableCheck(){
-        if (start==0 || end<=17){
+        if (start==0 || end<=14){
             this.top.left.setDisable(true);
         }
         else {
             this.top.left.setDisable(false);
         }
-        if (bot.viewList.size()<=17 || endFlag){
+        if (bot.viewList.size()<=14 || endFlag){
             this.top.right.setDisable(true);
         }
         else {
@@ -112,7 +110,7 @@ public class MainFrame {
 
     void initialParameter(){
         start=0;
-        end = 17;
+        end = 14;
         endFlag = false;
         DisableCheck();
     }

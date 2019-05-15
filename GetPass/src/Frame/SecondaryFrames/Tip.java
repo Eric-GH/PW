@@ -12,7 +12,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Tip {
-    Stage tipsWindows = new Stage();
+    public Stage tipsWindows = new Stage();
 
     public Label tipMessage = new Label();
     Button confirm = new Button("CONFIRM");

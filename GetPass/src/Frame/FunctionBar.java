@@ -32,7 +32,7 @@ public class FunctionBar extends BorderPane {
         HBox topH = new HBox();
         topH.setPrefHeight(70);
         topH.setPrefWidth(500);
-        topH.setPadding(new Insets(20,0,0,75));
+        topH.setPadding(new Insets(20,0,0,120));
         topH.getChildren().addAll(SearchField(),SearchButton(),ViewAllButton());
         topH.setStyle("-fx-background-color: #00ffff;");
         return topH;
@@ -41,7 +41,7 @@ public class FunctionBar extends BorderPane {
     TextField SearchField(){
         field= new TextField();
         field.setPrefHeight(35);
-        field.setPrefWidth(200);
+        field.setPrefWidth(260);
         return field;
     }
 
@@ -67,7 +67,7 @@ public class FunctionBar extends BorderPane {
         left.setPrefSize(40,25);
         right.setPrefSize(40,25);
         HBox.setMargin(left,new Insets(2,0,0,10));
-        HBox.setMargin(right, new Insets(2,0,0,400));
+        HBox.setMargin(right, new Insets(2,0,0,500));
         LR.getChildren().addAll(left,right);
         return LR;
     }

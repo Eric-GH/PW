@@ -5,8 +5,10 @@ package Frame;
  * Date: 05/03,2019
  */
 
+import Databass.DeletePass;
 import Databass.ReadPass;
 import Frame.SecondaryFrames.LineView;
+import Frame.SecondaryFrames.Tip;
 import Source.MyPassword;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -21,9 +23,7 @@ public class ViewPane extends BorderPane {
 
     public int view_current_id;
     public String Search_Aim = null;
-    public int pageNum = 0;
-    public int maxNum = 17;
-    int initialNum = 17;
+    int initialNum = 14;
     public ReadPass readPass;
     LineView view;
     public ArrayList<MyPassword> viewList;
@@ -77,7 +77,7 @@ public class ViewPane extends BorderPane {
     public VBox setViewAllInitialShow(){
         VBox viewVBox = new VBox();
         readPass = new ReadPass();
-        viewVBox.setPrefSize(500,445);
+        viewVBox.setPrefSize(600,445);
         readPass.ReadAll(view_current_id);
         viewList = new ArrayList<>();
         viewList.addAll(readPass.list);
@@ -85,10 +85,18 @@ public class ViewPane extends BorderPane {
             initialNum = readPass.list.size();
         }
         for (int i=0;i<initialNum;i++) {
+            final int fine = i;
             view = new LineView();
             view.setName_area(viewList.get(i).getAddress());
             view.setUser_area(viewList.get(i).getNames());
             view.setPass_area(viewList.get(i).getPassword());
+            view.view_delete.setOnAction(e->{
+                DeletePass deletePass = new DeletePass();
+                deletePass.Delete(viewList.get(fine).getId());
+                Tip t = new Tip();
+                t.tipMessage.setText("Delete Successfully!");
+                t.tipsWindows.show();
+            });
             viewVBox.getChildren().add(view);
         }
 
@@ -97,26 +105,44 @@ public class ViewPane extends BorderPane {
 
     public VBox setSearchShow(){
         VBox searchBox = new VBox();
-        searchBox.setPrefSize(500,445);
+        searchBox.setPrefSize(600,445);
         readPass = new ReadPass();
         readPass.SearchRead(view_current_id,Search_Aim);
         viewList = new ArrayList<>();
         viewList.addAll(readPass.searchList);
         if (viewList.size()<=initialNum){
             for (int s=0;s<viewList.size();s++){
+                final int fine = s;
                 view = new LineView();
                 view.setName_area(viewList.get(s).getAddress());
                 view.setUser_area(viewList.get(s).getNames());
                 view.setPass_area(viewList.get(s).getPassword());
+                view.view_delete.setOnAction(e->{
+                    DeletePass deletePass = new DeletePass();
+                    deletePass.Delete(viewList.get(fine).getId());
+                    Tip t = new Tip();
+                    t.tipMessage.setText("Delete Successfully!");
+                    t.tipsWindows.show();
+
+                });
                 searchBox.getChildren().add(view);
             }
         }
         else {
             for (int s=0;s<initialNum;s++){
+                final int fine = s;
                 view = new LineView();
                 view.setName_area(viewList.get(s).getAddress());
                 view.setUser_area(viewList.get(s).getNames());
                 view.setPass_area(viewList.get(s).getPassword());
+                view.view_delete.setOnAction(e->{
+                    DeletePass deletePass = new DeletePass();
+                    deletePass.Delete(viewList.get(fine).getId());
+                    Tip t = new Tip();
+                    t.tipMessage.setText("Delete Successfully!");
+                    t.tipsWindows.show();
+
+                });
                 searchBox.getChildren().add(view);
             }
         }
@@ -126,14 +152,22 @@ public class ViewPane extends BorderPane {
 
     public VBox ShowOnPage(int start, int end){
         VBox pageVBox = new VBox();
-        pageVBox.setPrefSize(500,445);
+        pageVBox.setPrefSize(600,445);
         //readPass = new ReadPass();
         //readPass.ReadAll(view_current_id);
         for (int i = start;i<end;i++){
+            final int fine = i;
             view = new LineView();
             view.setName_area(viewList.get(i).getAddress());
             view.setUser_area(viewList.get(i).getNames());
             view.setPass_area(viewList.get(i).getPassword());
+            view.view_delete.setOnAction(e->{
+                DeletePass deletePass = new DeletePass();
+                deletePass.Delete(viewList.get(fine).getId());
+                Tip t = new Tip();
+                t.tipMessage.setText("Delete Successfully!");
+                t.tipsWindows.show();
+            });
             pageVBox.getChildren().add(view);
         }
         return pageVBox;
