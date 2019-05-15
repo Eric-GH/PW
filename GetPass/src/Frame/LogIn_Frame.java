@@ -50,13 +50,7 @@ public class LogIn_Frame extends Application {
             if (logInDB.message.equals("True")){
 
                 try {
-                    frame = new MainFrame();
-                    frame.setCurrent_user(logInDB.user_id);
-                    //System.out.println(frame.current_user);
-                    frame.menu.add.current_user_id = logInDB.user_id;
-                    frame.menu.delete.delete_current_user_id = logInDB.user_id;
-                    frame.top.functionBar_current_userID = logInDB.user_id;
-                    frame.setID(logInDB.user_id);
+                    frame = new MainFrame(logInDB.user_id);
                     frame.windows.show();
 
                 }catch (Exception ex){
@@ -77,13 +71,7 @@ public class LogIn_Frame extends Application {
                     logInDB.login(name_TX.getText(),pass_TX.getText());
                     if (logInDB.message.equals("True")){
                         try {
-                            frame = new MainFrame();
-                            frame.setCurrent_user(logInDB.user_id);
-                            frame.menu.add.current_user_id = logInDB.user_id;
-                            frame.menu.delete.delete_current_user_id = logInDB.user_id;
-                            frame.top.functionBar_current_userID = logInDB.user_id;
-                            frame.setID(logInDB.user_id);
-                            //System.out.println(frame.current_user);
+                            frame = new MainFrame(logInDB.user_id);
                             frame.windows.show();
                         }catch (Exception ex){
                             ex.printStackTrace();

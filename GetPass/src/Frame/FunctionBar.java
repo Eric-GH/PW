@@ -18,9 +18,10 @@ public class FunctionBar extends BorderPane {
     Button right = new Button("→");
     public TextField field;
     public Button viewAll;
-    public int functionBar_current_userID=0;
+    public int functionBar_current_userID;
     public Button search;
-    FunctionBar(){
+    FunctionBar(int functionBar_current_userID){
+        this.functionBar_current_userID = functionBar_current_userID;
         this.setPrefHeight(100);
         this.setPrefWidth(500);
         this.setCenter(topH());

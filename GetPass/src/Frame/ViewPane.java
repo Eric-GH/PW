@@ -7,6 +7,7 @@ package Frame;
 
 import Databass.ReadPass;
 import Frame.SecondaryFrames.LineView;
+import Source.MyPassword;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -14,16 +15,26 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
+import java.util.ArrayList;
+
 public class ViewPane extends BorderPane {
 
-    public int view_current_id=0;
+    public int view_current_id;
     public String Search_Aim = null;
-    ViewPane(){
+    public int pageNum = 0;
+    public int maxNum = 17;
+    int initialNum = 17;
+    public ReadPass readPass;
+    LineView view;
+    public ArrayList<MyPassword> viewList;
+    ViewPane(int view_current_id){
+        this.view_current_id = view_current_id;
         this.setPrefHeight(475);
         this.setPrefWidth(500);
         this.setTop(setTopShow());
-        this.setCenter(setViewAllShow());
+        this.setCenter(setViewAllInitialShow());
         this.setStyle("-fx-background-color: #ff8c00;");
+
     }
 
     /**
@@ -63,29 +74,22 @@ public class ViewPane extends BorderPane {
     }
 
 
-    public VBox setViewAllShow(){
+    public VBox setViewAllInitialShow(){
         VBox viewVBox = new VBox();
-        LineView view;
-        ReadPass readPass = new ReadPass();
+        readPass = new ReadPass();
         viewVBox.setPrefSize(500,445);
         readPass.ReadAll(view_current_id);
-        if (readPass.list.size()<=17){
-            for (int i=0;i<readPass.list.size();i++) {
-                view = new LineView();
-                view.setName_area(readPass.list.get(i).getAddress());
-                view.setUser_area(readPass.list.get(i).getNames());
-                view.setPass_area(readPass.list.get(i).getPassword());
-                viewVBox.getChildren().add(view);
-            }
+        viewList = new ArrayList<>();
+        viewList.addAll(readPass.list);
+        if (viewList.size()<=initialNum){
+            initialNum = readPass.list.size();
         }
-        else {
-            for (int i=0;i<17;i++) {
-                view = new LineView();
-                view.setName_area(readPass.list.get(i).getAddress());
-                view.setUser_area(readPass.list.get(i).getNames());
-                view.setPass_area(readPass.list.get(i).getPassword());
-                viewVBox.getChildren().add(view);
-            }
+        for (int i=0;i<initialNum;i++) {
+            view = new LineView();
+            view.setName_area(viewList.get(i).getAddress());
+            view.setUser_area(viewList.get(i).getNames());
+            view.setPass_area(viewList.get(i).getPassword());
+            viewVBox.getChildren().add(view);
         }
 
         return viewVBox;
@@ -94,17 +98,44 @@ public class ViewPane extends BorderPane {
     public VBox setSearchShow(){
         VBox searchBox = new VBox();
         searchBox.setPrefSize(500,445);
-        LineView view;
-        ReadPass readPass = new ReadPass();
+        readPass = new ReadPass();
         readPass.SearchRead(view_current_id,Search_Aim);
-        for (int s=0;s<readPass.searchList.size();s++){
-            view = new LineView();
-            view.setName_area(readPass.searchList.get(s).getAddress());
-            view.setUser_area(readPass.searchList.get(s).getNames());
-            view.setPass_area(readPass.searchList.get(s).getPassword());
-            searchBox.getChildren().add(view);
+        viewList = new ArrayList<>();
+        viewList.addAll(readPass.searchList);
+        if (viewList.size()<=initialNum){
+            for (int s=0;s<viewList.size();s++){
+                view = new LineView();
+                view.setName_area(viewList.get(s).getAddress());
+                view.setUser_area(viewList.get(s).getNames());
+                view.setPass_area(viewList.get(s).getPassword());
+                searchBox.getChildren().add(view);
+            }
         }
+        else {
+            for (int s=0;s<initialNum;s++){
+                view = new LineView();
+                view.setName_area(viewList.get(s).getAddress());
+                view.setUser_area(viewList.get(s).getNames());
+                view.setPass_area(viewList.get(s).getPassword());
+                searchBox.getChildren().add(view);
+            }
+        }
+
         return searchBox;
     }
 
+    public VBox ShowOnPage(int start, int end){
+        VBox pageVBox = new VBox();
+        pageVBox.setPrefSize(500,445);
+        //readPass = new ReadPass();
+        //readPass.ReadAll(view_current_id);
+        for (int i = start;i<end;i++){
+            view = new LineView();
+            view.setName_area(viewList.get(i).getAddress());
+            view.setUser_area(viewList.get(i).getNames());
+            view.setPass_area(viewList.get(i).getPassword());
+            pageVBox.getChildren().add(view);
+        }
+        return pageVBox;
+    }
 }

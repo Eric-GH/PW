@@ -19,9 +19,10 @@ public class Delete {
     Label ask = new Label("Are you sure to delete ALL passwords?");
     Button delCancel = new Button("Cancel");
     Button delConfirm = new Button("Confirm");
-    public int delete_current_user_id=0;
+    public int delete_current_user_id;
 
-    public Delete(){
+    public Delete(int delete_current_user_id){
+        this.delete_current_user_id = delete_current_user_id;
         Scene DelScene = new Scene(setDelVBox());
         delWindows.setScene(DelScene);
     }

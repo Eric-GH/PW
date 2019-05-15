@@ -14,10 +14,11 @@ import javafx.scene.layout.HBox;
 
 public class MenuBar extends HBox {
 
-    public int menu_user_id = 0;
-    public Add add = new Add();
-    public Delete delete = new Delete();
-    MenuBar(){
+    public int menu_user_id;
+    public Add add;
+    public Delete delete;
+    MenuBar(int menu_user_id){
+        this.menu_user_id = menu_user_id;
         this.setPrefHeight(25);
         this.setPrefWidth(500);
         this.setPadding(new Insets(0,0,0,10));
@@ -37,6 +38,7 @@ public class MenuBar extends HBox {
     MenuItem AddNew(){
         MenuItem addNew = new MenuItem("Add New Password");
         addNew.setOnAction(e->{
+            add = new Add(menu_user_id);
             add.Addwindows.show();
         });
         return addNew;
@@ -46,6 +48,7 @@ public class MenuBar extends HBox {
     MenuItem DeleteAll(){
         MenuItem deleteAll = new MenuItem("Delete all Passwords");
         deleteAll.setOnAction(e->{
+            delete = new Delete(menu_user_id);
             delete.delWindows.show();
         });
         return deleteAll;

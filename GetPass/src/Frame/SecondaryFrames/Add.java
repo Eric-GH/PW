@@ -21,7 +21,7 @@ public class Add {
     VBox vBox = new VBox();
     HBox hBox = new HBox();
     Tip tips;
-    public int current_user_id=0;
+    public int current_user_id;
     /*
         Create each TextField elements
          */
@@ -30,7 +30,8 @@ public class Add {
     TextField password_TX = new TextField();
     Label warning = new Label();
 
-    public Add(){
+    public Add(int current_user_id){
+        this.current_user_id = current_user_id;
         Scene scene = new Scene(setVBox());
         Addwindows.setScene(scene);
     }
