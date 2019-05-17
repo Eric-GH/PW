@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" prefHeight="100.0" prefWidth="400.0" text="WELCOME" />
+      <HBox prefHeight="50.0" prefWidth="400.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="80.0" text="USER NAME:">
+               <HBox.margin>
+                  <Insets left="70.0" />
+               </HBox.margin>
+            </Label>
+            <TextField maxHeight="30.0" minHeight="30.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox prefHeight="40.0" prefWidth="400.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="80.0" text="PASSWORD:">
+               <HBox.margin>
+                  <Insets left="70.0" />
+               </HBox.margin>
+            </Label>
+            <TextField maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" prefHeight="40.0" prefWidth="400.0" text="user name or password incorrect, please try again" />
+      <HBox prefHeight="50.0" prefWidth="400.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="REGISTRATION">
+               <HBox.margin>
+                  <Insets left="40.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="SUBMIT">
+               <HBox.margin>
+                  <Insets left="120.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
