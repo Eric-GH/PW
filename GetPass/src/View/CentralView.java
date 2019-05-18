@@ -16,7 +16,6 @@ import java.util.ArrayList;
 
 public class CentralView implements ModelListener {
     public Stage viewStage = new Stage();
-
     BorderPane listViewPane;
     CentralControl controller;
     Database model;
@@ -38,6 +37,7 @@ public class CentralView implements ModelListener {
 
     public void setController(CentralControl controller){
         this.controller = controller;
+        // TODO 在这里设置actions
     }
     public void setModel(Database model){
         this.model = model;
@@ -55,6 +55,9 @@ public class CentralView implements ModelListener {
         MenuItem quit = new MenuItem("QUIT");
         menuBox.setId("mBox");
         menuButton.setId("mbtn");
+        //add.setOnAction(controller::AddNewRec);
+        //deleteAll.setOnAction(controller::DeleteAllRec);
+        //quit.setOnAction(controller::QuitSys);
         menuBox.setPadding(new Insets(0,0,0,10));
         menuButton.getItems().addAll(add,deleteAll,quit);
         menuBox.getChildren().addAll(menuButton);
@@ -82,6 +85,10 @@ public class CentralView implements ModelListener {
         left.setId("page");
         right.setId("page");
         search_tx.setId("s_field");
+        //search.setOnAction(controller::SearchRec);
+       //all.setOnAction(controller::ShowAllRec);
+        //left.setOnAction(controller::PageLeft);
+        //right.setOnAction(controller::PageRight);
         func_top.setPadding(new Insets(0,0,0,120));
         HBox.setMargin(search,new Insets(0,0,0,10));
         HBox.setMargin(all,new Insets(0,0,0,10));
@@ -122,9 +129,9 @@ public class CentralView implements ModelListener {
         /*
         set position && margin
          */
+        HBox.setMargin(listPass,new Insets(0,0,0,80));
         HBox.setMargin(listName,new Insets(0,0,0,40));
         HBox.setMargin(listUser,new Insets(0,0,0,80));
-        HBox.setMargin(listPass,new Insets(0,0,0,80));
 
         /*
         ADD up all
@@ -154,7 +161,7 @@ public class CentralView implements ModelListener {
      * This is the logIn frame
      * @return LogInBox
      */
-    VBox LogIn(){
+    public VBox LogIn(){
         VBox LogInBox = new VBox();
         HBox userLine = new HBox();
         HBox passLine = new HBox();
@@ -164,8 +171,8 @@ public class CentralView implements ModelListener {
         passLine.setId("u_pHBox");
         btnLine.setId("u_pHBox");
         Label wel = new Label("WELCOME");
-        Label user_name = new Label();
-        Label pass_word = new Label();
+        Label user_name = new Label("USER NAME:");
+        Label pass_word = new Label("PASSWORD:");
         wel.setId("welcome");
         user_name.setId("u_pLabel");
         pass_word.setId("u_pLabel");
@@ -177,12 +184,16 @@ public class CentralView implements ModelListener {
         reg.setId("log_btn");
         con.setId("log_btn");
 
+        reg.setOnAction(controller::LogIn_reg);
+        con.setOnAction(controller::LogIn_submit);
+
+
         HBox.setMargin(user_name,new Insets(0,0,0,70));
         HBox.setMargin(pass_word,new Insets(0,0,0,70));
         HBox.setMargin(username_tx,new Insets(0,0,0,10));
         HBox.setMargin(password_tx,new Insets(0,0,0,10));
         HBox.setMargin(reg,new Insets(0,0,0,40));
-        HBox.setMargin(con,new Insets(0,0,0,120));
+        HBox.setMargin(con,new Insets(0,0,0,80));
 
         userLine.getChildren().addAll(user_name,username_tx);
         passLine.getChildren().addAll(pass_word,password_tx);

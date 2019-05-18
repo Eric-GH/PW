@@ -1,0 +1,33 @@
+
+#vbox{
+    -fx-pref-width: 300;
+    -fx-pref-height: 400;
+}
+
+#hbox{
+    -fx-pref-width: 300;
+    -fx-pref-height: 60;
+}
+
+#title_mgs{
+    -fx-pref-width: 300;
+    -fx-pref-height: 60;
+    -fx-alignment: CENTER;
+}
+
+#labels{
+    -fx-pref-width: 300;
+    -fx-pref-height: 20;
+    -fx-alignment: CENTER;
+}
+
+#fields{
+    -fx-pref-width: 200;
+    -fx-pref-height: 30;
+    -fx-alignment: CENTER;
+}
+
+#new_btn{
+    -fx-pref-width: 80;
+    -fx-pref-height: 30;
+}

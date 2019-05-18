@@ -12,7 +12,7 @@ public class Database {
     public boolean used_check = false; // check new user name duplication.
     public int user_id = 0; // current user id
     public ArrayList<MyPassword> dataList; // list contained all password records
-    public ArrayList<ModelListener> subscribers;
+    public ArrayList<ModelListener> subscribers = new ArrayList<>();
 
     /**
      * Connect to local database
