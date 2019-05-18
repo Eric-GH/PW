@@ -1,0 +1,74 @@
+#mBox{
+    -fx-pref-width: 500;
+    -fx-pref-height: 25;
+}
+
+#mbtn{
+    -fx-pref-width: 80;
+    -fx-pref-height: 25;
+}
+
+#func{
+    -fx-pref-width: 500;
+    -fx-pref-height: 100;
+
+}
+
+#f_top{
+    -fx-pref-width: 500;
+    -fx-pref-height: 70;
+}
+
+#f_bot{
+    -fx-pref-width: 500;
+    -fx-pref-height: 30;
+}
+
+#search{
+    -fx-pref-width: 80;
+    -fx-pref-height: 35;
+
+}
+
+#page{
+    -fx-pref-width: 40;
+    -fx-pref-height: 25;
+}
+
+#s_field{
+    -fx-pref-width: 260;
+    -fx-pref-height: 35;
+}
+
+#LVP{
+    -fx-pref-width: 500;
+    -fx-pref-height: 475;
+}
+#title{
+    -fx-pref-width: 500;
+    -fx-pref-height: 30;
+}
+
+#title_element{
+    -fx-pref-width: 80;
+    -fx-pref-height: 25;
+    -fx-alignment: CENTER;
+}
+
+#LinePane{
+    -fx-pref-width: 600;
+    -fx-pref-height: 30;
+}
+
+#line_area{
+    -fx-pref-width: 150;
+    -fx-pref-height: 25;
+    -fx-max-height: 25;
+    -fx-min-height: 25;
+    -fx-wrap-text: true;
+}
+
+#displayBox{
+    -fx-pref-width: 600;
+    -fx-pref-height: 445;
+}

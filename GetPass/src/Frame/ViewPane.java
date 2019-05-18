@@ -46,30 +46,30 @@ public class ViewPane extends BorderPane {
         Create elements
          */
         HBox topBox = new HBox();
-        Label listName = new Label("NAME");
-        Label listUser = new Label("USERNAME");
-        Label listPass = new Label("PASSWORD");
+        Label lisName = new Label("NAME");
+        Label lisUser = new Label("USERNAME");
+        Label lisPass = new Label("PASSWORD");
         /*
         Set up size of elements
          */
         topBox.setPrefSize(500,30);
-        listName.setPrefSize(80,25);
-        listUser.setPrefSize(80,25);
-        listPass.setPrefSize(80,25);
+        lisName.setPrefSize(80,25);
+        lisUser.setPrefSize(80,25);
+        lisPass.setPrefSize(80,25);
         /*
         set position && margin
          */
-        listName.setAlignment(Pos.CENTER);
-        listUser.setAlignment(Pos.CENTER);
-        listPass.setAlignment(Pos.CENTER);
-        HBox.setMargin(listName,new Insets(0,0,0,40));
-        HBox.setMargin(listUser,new Insets(0,0,0,80));
-        HBox.setMargin(listPass,new Insets(0,0,0,80));
+        lisName.setAlignment(Pos.CENTER);
+        lisUser.setAlignment(Pos.CENTER);
+        lisPass.setAlignment(Pos.CENTER);
+        HBox.setMargin(lisName,new Insets(0,0,0,40));
+        HBox.setMargin(lisUser,new Insets(0,0,0,80));
+        HBox.setMargin(lisPass,new Insets(0,0,0,80));
 
         /*
         ADD up all
          */
-        topBox.getChildren().addAll(listName,listUser,listPass);
+        topBox.getChildren().addAll(lisName,lisUser,lisPass);
         return topBox;
     }
 

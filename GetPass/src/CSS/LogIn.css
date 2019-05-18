@@ -1,0 +1,39 @@
+
+#log_main{
+    -fx-pref-width: 400;
+    -fx-pref-height: 300;
+}
+
+#welcome{
+    -fx-pref-width: 400;
+    -fx-pref-height: 100;
+    -fx-alignment: CENTER;
+}
+
+#u_pHBox{
+    -fx-pref-width: 400;
+    -fx-pref-height: 50;
+}
+
+
+#u_pLabel{
+    -fx-pref-width: 80;
+    -fx-pref-height: 30;
+}
+
+
+#u_pText{
+    -fx-pref-width: 150;
+    -fx-pref-height: 30;
+}
+
+#lgMessage{
+    -fx-pref-width: 400;
+    -fx-pref-height: 40;
+    -fx-alignment: CENTER;
+}
+
+#log_btn{
+    -fx-pref-width: 120;
+    -fx-pref-height: 30;
+}

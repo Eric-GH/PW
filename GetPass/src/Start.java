@@ -18,12 +18,21 @@ public class Start extends Application {
     Label loginMessage = new Label();
     TextField user_tx = new TextField();
     PasswordField pass_tx = new PasswordField();
-    CentralControl controller;
+    CentralControl controller = new CentralControl();
+    Database model = new Database();
+    CentralView view = new CentralView();
 
     @Override
     public void start(Stage LoginStage) throws Exception {
         CentralView view = new CentralView();
         Database model = new Database();
+
+        view.setController(controller);
+        view.setModel(model);
+        controller.setView(view);
+        controller.setModel(model);
+        model.addSubscriber(view);
+
         controller = new CentralControl();
         loginPane = new VBox();
         loginPane.setPrefSize(400,300);
@@ -33,6 +42,7 @@ public class Start extends Application {
         loginMessage.setAlignment(Pos.CENTER);
         loginPane.getChildren().addAll(welcomeLogo,UserLine(), PassLine(),loginMessage,ButtonLine());
         Scene scene = new Scene(loginPane,400,300);
+        scene.getStylesheets().add("./CSS/LogIn.css");
         LoginStage.setScene(scene);
         LoginStage.show();
     }
@@ -79,12 +89,23 @@ public class Start extends Application {
     HBox ButtonLine(){
         HBox btnL = new HBox();
         Button reg = new Button("REGISTRATION");
+        reg.setId("reg_btn");
         Button con = new Button("SUBMIT");
+
+
+        con.setOnAction(e->{
+            CentralView view = new CentralView();
+            view.viewStage.show();
+        });
+
+
         reg.setPrefSize(120,30);
         con.setPrefSize(80,30);
         btnL.setPrefSize(400,50);
         HBox.setMargin(reg,new Insets(0,0,0,40));
         HBox.setMargin(con,new Insets(0,0,0,120));
+        con.setOnAction(controller::LogIn_submit);
+        reg.setOnAction(controller::LogIn_reg);
         btnL.getChildren().addAll(reg,con);
         return btnL;
     }
