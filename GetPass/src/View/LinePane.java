@@ -10,6 +10,7 @@ public class LinePane extends HBox {
     public TextArea user_area = new TextArea();
     public TextArea pass_area = new TextArea();
     public Button view_delete = new Button("DELETE");
+
     /**
      * Construct to set up the elements in LinePane frame
      */

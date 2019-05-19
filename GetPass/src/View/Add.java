@@ -1,6 +1,7 @@
 package View;
 
 
+import Controller.CentralControl;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -12,25 +13,31 @@ import javafx.stage.Stage;
 
 public class Add {
     public Stage Addwindows = new Stage();
+    Button cancel;
+    Button submit;
+    CentralControl control;
     VBox vBox = new VBox();
 
-    public int current_user_id;
     /*
         Create each TextField elements
          */
-    TextField address_TX = new TextField();
-    TextField user_TX = new TextField();
-    TextField password_TX = new TextField();
-    Label warning = new Label();
+    public TextField address_TX = new TextField();
+    public TextField user_TX = new TextField();
+    public TextField password_TX = new TextField();
+    public Label warning = new Label();
 
-    public Add(int current_user_id){
-        this.current_user_id = current_user_id;
+    public Add(){
         Scene scene = new Scene(setVBox());
         scene.getStylesheets().add("./CSS/SecondaryFrame.css");
         Addwindows.setScene(scene);
     }
 
+    public void setController(CentralControl controller){
+        this.control = controller;
+        submit.setOnAction(controller::AddNewRec);
+        cancel.setOnAction(controller::CancelAdd);
 
+    }
 
     /**
      * Set Up the VBox frame and it's elements
@@ -45,8 +52,8 @@ public class Add {
         Label address = new Label("Name of Password");
         Label newUserName = new Label("USER NAME");
         Label newPassWord = new Label("PASSWORD");
-        Button cancel = new Button("Cancel");
-        Button submit = new Button("Submit");
+        cancel = new Button("Cancel");
+        submit = new Button("Submit");
         HBox hBox = new HBox();
 
 
@@ -72,10 +79,10 @@ public class Add {
         /*
           Set up the margin of the VBox
          */
-        VBox.setMargin(address,new Insets(10,0,0,80));
-        VBox.setMargin(title,new Insets(0,0,0,80));
-        VBox.setMargin(newPassWord,new Insets(0,0,0,80));
-        VBox.setMargin(newUserName,new Insets(20,0,0,80));
+        VBox.setMargin(address,new Insets(10,0,0,0));
+        //VBox.setMargin(title,new Insets(0,0,0,80));
+        VBox.setMargin(newPassWord,new Insets(20,0,0,0));
+        VBox.setMargin(newUserName,new Insets(20,0,0,0));
         VBox.setMargin(user_TX,new Insets(0,0,0,50));
         VBox.setMargin(warning,new Insets(10,0,0,0));
         VBox.setMargin(address_TX,new Insets(0,0,0,50));
@@ -85,12 +92,6 @@ public class Add {
         HBox.setMargin(submit,new Insets(0,0,0,100));
 
 
-        /*
-        Set actions on buttons
-         */
-        //TODO
-        //cancel.setOnAction();
-        //submit.setOnAction();
 
 
         /*

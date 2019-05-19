@@ -16,6 +16,19 @@ import java.util.ArrayList;
 
 public class CentralView implements ModelListener {
     public Stage viewStage = new Stage();
+    public Stage LogStage = new Stage();
+    public Add addNewPass = new Add();
+    public Tips tips = new Tips();
+
+    Button search = new Button("SEARCH");
+    Button all = new Button("ViewAll");
+    public Button left = new Button("←");
+    public Button right = new Button("→");
+    MenuItem add = new MenuItem("ADD NEW PASSWORD");
+    MenuItem deleteAll = new MenuItem("DELETE ALL PASSWORDS");
+    MenuItem quit = new MenuItem("QUIT");
+
+
     BorderPane listViewPane;
     CentralControl controller;
     Database model;
@@ -37,6 +50,16 @@ public class CentralView implements ModelListener {
 
     public void setController(CentralControl controller){
         this.controller = controller;
+        addNewPass.setController(controller);
+        tips.setController(controller);
+        add.setOnAction(controller::OpenAddFrame);
+        deleteAll.setOnAction(controller::OpenDeleteConfirmFrame);
+        quit.setOnAction(controller::QuitSys);
+        search.setOnAction(controller::SearchRec);
+        all.setOnAction(controller::ShowAllRec);
+        left.setOnAction(controller::PageLeft);
+        right.setOnAction(controller::PageRight);
+
         // TODO 在这里设置actions
     }
     public void setModel(Database model){
@@ -50,14 +73,10 @@ public class CentralView implements ModelListener {
         //TODO action
         HBox menuBox = new HBox();
         MenuButton menuButton = new MenuButton("Menu");
-        MenuItem add = new MenuItem("ADD NEW PASSWORD");
-        MenuItem deleteAll = new MenuItem("DELETE ALL PASSWORDS");
-        MenuItem quit = new MenuItem("QUIT");
+
         menuBox.setId("mBox");
         menuButton.setId("mbtn");
-        //add.setOnAction(controller::AddNewRec);
-        //deleteAll.setOnAction(controller::DeleteAllRec);
-        //quit.setOnAction(controller::QuitSys);
+
         menuBox.setPadding(new Insets(0,0,0,10));
         menuButton.getItems().addAll(add,deleteAll,quit);
         menuBox.getChildren().addAll(menuButton);
@@ -73,10 +92,7 @@ public class CentralView implements ModelListener {
         HBox func_top = new HBox();
         HBox func_bot = new HBox();
         //TextField search_tx = new TextField();
-        Button search = new Button("SEARCH");
-        Button all = new Button("ViewAll");
-        Button left = new Button("←");
-        Button right = new Button("→");
+
         funcPane.setId("func");
         func_top.setId("f_top");
         func_bot.setId("f_bot");
@@ -85,10 +101,7 @@ public class CentralView implements ModelListener {
         left.setId("page");
         right.setId("page");
         search_tx.setId("s_field");
-        //search.setOnAction(controller::SearchRec);
-       //all.setOnAction(controller::ShowAllRec);
-        //left.setOnAction(controller::PageLeft);
-        //right.setOnAction(controller::PageRight);
+
         func_top.setPadding(new Insets(0,0,0,120));
         HBox.setMargin(search,new Insets(0,0,0,10));
         HBox.setMargin(all,new Insets(0,0,0,10));
@@ -147,10 +160,11 @@ public class CentralView implements ModelListener {
         LinePane line;
         for (int i=0;i<viewListShow.size();i++){
             line = new LinePane();
+            final int m = i;
             line.setName_area(viewListShow.get(i).getAddress());
             line.setUser_area(viewListShow.get(i).getNames());
             line.setPass_area(viewListShow.get(i).getPassword());
-            line.view_delete.setOnAction(controller::SingleDelete);
+            line.view_delete.setOnAction(event -> controller.SingleDelete(viewListShow.get(m).getId()));
             displayBox.getChildren().add(line);
         }
         return displayBox;

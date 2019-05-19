@@ -2,14 +2,7 @@ import Controller.CentralControl;
 import Model.Database;
 import View.CentralView;
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 public class Start extends Application {
@@ -29,8 +22,8 @@ public class Start extends Application {
 
         Scene scene = new Scene(view.LogIn(),400,300);
         scene.getStylesheets().add("./CSS/LogIn.css");
-        LoginStage.setScene(scene);
-        LoginStage.show();
+        view.LogStage.setScene(scene);
+        view.LogStage.show();
     }
 
     /**

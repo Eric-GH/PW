@@ -12,7 +12,9 @@ public class Database {
     public boolean used_check = false; // check new user name duplication.
     public int user_id = 0; // current user id
     public ArrayList<MyPassword> dataList; // list contained all password records
-    public ArrayList<ModelListener> subscribers = new ArrayList<>();
+    public ModelListener subscriber;
+    public boolean search_flag = false;
+    String search_Aim = null;
 
     /**
      * Connect to local database
@@ -92,6 +94,8 @@ public class Database {
         else {
             System.out.println("Connection Failed");
         }
+        search_flag = false;
+        notifySubscribers();
     }
 
 
@@ -105,6 +109,7 @@ public class Database {
         String searchName = "%"+names+"%";
         if (connection!=null){
             try{
+                search_Aim = names;
                 String query = "SELECT id,password_address,password_name,password_pass FROM password_garage WHERE user_manage_id = ? AND password_address like ?";
                 PreparedStatement statement = connection.prepareStatement(query);
                 statement.setInt(1,id);
@@ -122,6 +127,8 @@ public class Database {
         else {
             System.out.println("Connection Failed");
         }
+        search_flag = true;
+        notifySubscribers();
     }
 
 
@@ -134,12 +141,15 @@ public class Database {
         Connect();
         if (connection!=null){
             try{
+                System.out.println(pass_id);
                 String query = "DELETE FROM password_garage WHERE id = ?";
                 PreparedStatement statement = connection.prepareStatement(query);
                 statement.setInt(1,pass_id);
                 int result = statement.executeUpdate();
                 if (result > 0) {
                     flag = true;
+                    AllPassRead(user_id);
+
                 }
                 else {
                     flag = false;
@@ -152,6 +162,14 @@ public class Database {
         else {
             System.out.println("Connection Failed");
         }
+
+        if (search_flag){
+            SearchRead(user_id,search_Aim);
+        }
+        else {
+            AllPassRead(user_id);
+        }
+        notifySubscribers(); // tell the view the model changed
     }
 
     /**
@@ -180,6 +198,8 @@ public class Database {
         else {
             System.out.println("Connection Failed");
         }
+        AllPassRead(user_id);
+        notifySubscribers();
     }
 
 
@@ -251,7 +271,6 @@ public class Database {
                 int result = statement.executeUpdate();
                 if (result > 0){
                     flag = true;
-
                 }
                 else {
                     flag = false;
@@ -264,6 +283,13 @@ public class Database {
         else {
             System.out.println("Connection Failed");
         }
+        if (search_flag){
+            SearchRead(user_id,search_Aim);
+        }
+        else {
+            AllPassRead(user_id);
+        }
+        notifySubscribers();
     }
 
     /**
@@ -271,15 +297,13 @@ public class Database {
      * @param sub new subscriber
      */
     public void addSubscriber(ModelListener sub){
-        this.subscribers.add(sub);
+        this.subscriber = sub;
     }
 
     /**
      * Tell the subscriber there are something changed
      */
     private  void notifySubscribers(){
-        for ( ModelListener ml:subscribers) {
-            ml.modelChanged();
-        }
+        this.subscriber.modelChanged();
     }
 }

@@ -24,10 +24,29 @@
 #fields{
     -fx-pref-width: 200;
     -fx-pref-height: 30;
-    -fx-alignment: CENTER;
+    -fx-max-width: 200;
+    -fx-max-height: 30;
+    -fx-min-width: 200;
+    -fx-min-height: 30;
 }
 
 #new_btn{
     -fx-pref-width: 80;
     -fx-pref-height: 30;
+}
+
+#TipsBox{
+    -fx-pref-width: 200;
+    -fx-pref-height: 100;
+}
+
+#warningLabel{
+    -fx-pref-width: 200;
+    -fx-pref-height: 70;
+    -fx-alignment: CENTER;
+}
+
+#tipsBtn{
+    -fx-pref-width: 80;
+    -fx-pref-height: 25;
 }
