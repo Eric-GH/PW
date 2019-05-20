@@ -201,9 +201,9 @@ public class CentralView implements ModelListener {
         reg.setId("log_btn");
         con.setId("log_btn");
 
-        //reg.setOnAction(controller::OpenReg);
+        reg.setOnAction(controller::OpenReg);
         //TODO 测试用
-        reg.setOnAction(controller::test);
+        //reg.setOnAction(controller::test);
         con.setOnAction(controller::LogIn_submit);
 
 

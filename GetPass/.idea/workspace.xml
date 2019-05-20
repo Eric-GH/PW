@@ -2,53 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19efce69-8fff-4677-971c-5c3e1fe5d232" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Materials/banner.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/CSS/LogIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GetPass/CSS/LogIn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Controller/CentralControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GetPass/Controller/CentralControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Databass/AddNewPass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Databass/AddNewUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Databass/Connect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Databass/DeletePass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Databass/LogIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Databass/ReadPass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Frame/FunctionBar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Frame/LogIn_Frame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Frame/MainFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Frame/MenuBar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Frame/SecondaryFrames/Add.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Frame/SecondaryFrames/Delete.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Frame/SecondaryFrames/LineView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Frame/SecondaryFrames/Registration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Frame/SecondaryFrames/Tip.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Frame/ViewPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Source/MyPassword.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/View/CentralView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GetPass/View/CentralView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/View/Tips.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GetPass/View/Tips.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSS/LogIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/LogIn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSS/SecondaryFrame.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/SecondaryFrame.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CentralControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CentralControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Databass/AddNewPass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Databass/AddNewUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Databass/Connect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Databass/DeletePass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Databass/LogIn.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Databass/ReadPass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/FunctionBar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/LogIn_Frame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/MainFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/MenuBar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/SecondaryFrames/Add.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/SecondaryFrames/Delete.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/SecondaryFrames/LineView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/SecondaryFrames/Registration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/SecondaryFrames/Tip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame/ViewPane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Source/MyPassword.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/CentralView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/CentralView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Tips.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Tips.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,7 +15,20 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/View/CentralView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="203" column="8" lean-forward="true" selection-start-line="203" selection-start-column="8" selection-end-line="203" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -110,8 +77,8 @@
         <option value="$PROJECT_DIR$/src/CSS/SecondaryFrame.css" />
         <option value="$PROJECT_DIR$/src/Model/Database.java" />
         <option value="$PROJECT_DIR$/src/View/Register.java" />
-        <option value="$PROJECT_DIR$/src/View/CentralView.java" />
         <option value="$PROJECT_DIR$/src/Controller/CentralControl.java" />
+        <option value="$PROJECT_DIR$/src/View/CentralView.java" />
       </list>
     </option>
   </component>
@@ -142,6 +109,18 @@
               <item name="GetPass" type="b2602c69:ProjectViewProjectNode" />
               <item name="GetPass" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GetPass" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GetPass" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Materials" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GetPass" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GetPass" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -268,15 +247,16 @@
       <workItem from="1558115322223" duration="23470000" />
       <workItem from="1558282026851" duration="10926000" />
       <workItem from="1558295156124" duration="45000" />
-      <workItem from="1558318628346" duration="7193000" />
+      <workItem from="1558318628346" duration="7276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41634000" />
+    <option name="totallyTimeSpent" value="41717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="862" y="75" width="1071" height="1261" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24586977" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -547,16 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/CentralView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="204" column="18" selection-start-line="204" selection-start-column="18" selection-end-line="204" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/CentralControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="794">
@@ -575,6 +545,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1697">
           <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/CentralView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="203" column="8" lean-forward="true" selection-start-line="203" selection-start-column="8" selection-end-line="203" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
