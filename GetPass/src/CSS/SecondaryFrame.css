@@ -36,12 +36,12 @@
 }
 
 #TipsBox{
-    -fx-pref-width: 200;
+    -fx-pref-width: 300;
     -fx-pref-height: 100;
 }
 
 #warningLabel{
-    -fx-pref-width: 200;
+    -fx-pref-width: 300;
     -fx-pref-height: 70;
     -fx-alignment: CENTER;
 }
@@ -50,3 +50,62 @@
     -fx-pref-width: 80;
     -fx-pref-height: 25;
 }
+
+
+#regVBox{
+    -fx-pref-width: 300;
+    -fx-pref-height: 400;
+}
+
+
+#regtitle{
+    -fx-pref-width: 300;
+    -fx-pref-height: 60;
+    -fx-alignment: CENTER;
+}
+
+#regLabels{
+    -fx-pref-width: 300;
+    -fx-pref-height: 25;
+    -fx-alignment: CENTER;
+}
+
+
+#regmessage{
+    -fx-pref-width: 300;
+    -fx-pref-height: 50;
+    -fx-alignment: CENTER;
+}
+
+
+
+
+#regFields{
+    -fx-pref-width: 185;
+    -fx-pref-height: 25;
+    -fx-max-width: 185;
+    -fx-max-height: 25;
+    -fx-min-width: 185;
+    -fx-min-height: 25;
+}
+
+
+
+
+
+
+#regHBox{
+    -fx-pref-width: 300;
+    -fx-pref-height: 30;
+}
+
+
+
+
+
+#regbtn{
+    -fx-pref-width: 80;
+    -fx-pref-height: 30;
+}
+
+

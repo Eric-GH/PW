@@ -25,6 +25,7 @@ public class Tips {
     public void setController(CentralControl controller){
         this.controller = controller;
         confirm.setOnAction(controller::tipsFunction);
+
     }
     VBox setBox(){
         /*
@@ -33,7 +34,7 @@ public class Tips {
         tipVBox.setId("TipsBox");
         tipMessage.setId("warningLabel");
         confirm.setId("tipsBtn");
-        VBox.setMargin(confirm,new Insets(0,0,0,60));
+        VBox.setMargin(confirm,new Insets(0,0,0,120));
         tipVBox.getChildren().addAll(tipMessage,confirm);
         return tipVBox;
     }

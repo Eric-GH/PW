@@ -4,6 +4,8 @@ import Model.Database;
 import Model.MyPassword;
 import View.CentralView;
 import javafx.event.ActionEvent;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 import java.util.ArrayList;
 
@@ -46,9 +48,48 @@ public class CentralControl {
         view.modelChanged();//let view know the model changed
     }
 
+
+    public void KeyPress(KeyEvent event){
+        if (event.getCode() == KeyCode.ENTER){
+            LogIn_submit(null);
+        }
+
+    }
+
+    public void OpenReg(ActionEvent event){
+        view.register.regWindows.show();
+    }
+    public void reg_Cancel(ActionEvent event){
+        view.register.reguser_tx.setText(null);
+        view.register.regpass_tx.setText(null);
+        view.register.regmail_tx.setText(null);
+        view.register.regWindows.close();
+    }
     public void LogIn_reg(ActionEvent event){
-        view.LogStage.close();
-        view.viewStage.show();
+        if (view.register.reguser_tx.getText().isEmpty()|| view.register.regpass_tx.getText().isEmpty()){
+            view.register.regMessage.setText("user name or password cannot be empty");
+        }
+        else {
+            model.addUser(view.register.reguser_tx.getText(),view.register.regpass_tx.getText());
+            if (model.used_check){
+                view.register.regMessage.setText("This user name already exist, please try again");
+            }
+            else {
+                if (model.flag){
+                    view.register.reguser_tx.setText(null);
+                    view.register.regpass_tx.setText(null);
+                    view.register.regmail_tx.setText(null);
+                    view.register.regWindows.close();
+                    view.tips.tipMessage.setText("Congratulations! Register Successfully!");
+                    view.tips.tipsWindows.show();
+
+                }
+                else {
+                    view.register.regMessage.setText("There are something in error, please try again");
+                }
+            }
+        }
+
     }
 
 
@@ -85,17 +126,11 @@ public class CentralControl {
     }
 
     public void OpenDeleteConfirmFrame(ActionEvent event){
-
+        view.tips.delete_flag = true;
+        view.tips.tipMessage.setText("Are you sure to delete ALL password records?");
+        view.tips.tipsWindows.show();
     }
 
-    public void DeleteAllRec(ActionEvent event){
-        //TODO 弹出二级窗口，向用户确认
-    }
-
-    public void CancelDelete(ActionEvent event){
-
-
-    }
 
     public void QuitSys(ActionEvent event){
         System.exit(0);
@@ -173,7 +208,7 @@ public class CentralControl {
 
     public void SingleDelete(int rec_id){
         model.delete(rec_id);
-        setList(0,max);
+        initialList();
 
     }
 
@@ -202,12 +237,24 @@ public class CentralControl {
     public void tipsFunction(ActionEvent event){
         if (view.tips.delete_flag){
             model.deleteAllPass(current_user_ID);
-
+            view.tips.tipsWindows.close();
+            initialList();
+            view.modelChanged();
         }
         else {
             view.tips.tipsWindows.close();
         }
-        initialList();
-        view.modelChanged();
+
     }
+
+
+    /**
+     * 测试专用，防忘删
+     * @param event sf
+     */
+    public void test(ActionEvent event){
+        view.LogStage.close();
+        view.viewStage.show();
+    }
+
 }

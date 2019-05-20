@@ -19,6 +19,7 @@ public class CentralView implements ModelListener {
     public Stage LogStage = new Stage();
     public Add addNewPass = new Add();
     public Tips tips = new Tips();
+    public Register register = new Register();
 
     Button search = new Button("SEARCH");
     Button all = new Button("ViewAll");
@@ -52,6 +53,7 @@ public class CentralView implements ModelListener {
         this.controller = controller;
         addNewPass.setController(controller);
         tips.setController(controller);
+        register.setController(controller);
         add.setOnAction(controller::OpenAddFrame);
         deleteAll.setOnAction(controller::OpenDeleteConfirmFrame);
         quit.setOnAction(controller::QuitSys);
@@ -59,6 +61,7 @@ public class CentralView implements ModelListener {
         all.setOnAction(controller::ShowAllRec);
         left.setOnAction(controller::PageLeft);
         right.setOnAction(controller::PageRight);
+        password_tx.setOnKeyPressed(controller::KeyPress);
 
         // TODO 在这里设置actions
     }
@@ -198,16 +201,16 @@ public class CentralView implements ModelListener {
         reg.setId("log_btn");
         con.setId("log_btn");
 
-        reg.setOnAction(controller::LogIn_reg);
+        //reg.setOnAction(controller::OpenReg);
+        //TODO 测试用
+        reg.setOnAction(controller::test);
         con.setOnAction(controller::LogIn_submit);
 
 
-        HBox.setMargin(user_name,new Insets(0,0,0,70));
-        HBox.setMargin(pass_word,new Insets(0,0,0,70));
-        HBox.setMargin(username_tx,new Insets(0,0,0,10));
-        HBox.setMargin(password_tx,new Insets(0,0,0,10));
-        HBox.setMargin(reg,new Insets(0,0,0,40));
-        HBox.setMargin(con,new Insets(0,0,0,80));
+        HBox.setMargin(user_name,new Insets(0,0,0,55));
+        HBox.setMargin(pass_word,new Insets(0,0,0,55));
+        HBox.setMargin(reg,new Insets(0,0,10,25));
+        HBox.setMargin(con,new Insets(0,0,10,70));
 
         userLine.getChildren().addAll(user_name,username_tx);
         passLine.getChildren().addAll(pass_word,password_tx);

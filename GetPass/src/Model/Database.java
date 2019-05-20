@@ -78,11 +78,12 @@ public class Database {
         Connect();
         if (connection!=null){
             try{
+                dataList = new ArrayList<>();
                 String query = "SELECT id,password_address,password_name,password_pass FROM password_garage WHERE user_manage_id = ?";
                 PreparedStatement statement = connection.prepareStatement(query);
                 statement.setInt(1,id);
                 ResultSet rs = statement.executeQuery();
-                dataList = new ArrayList<>();
+
                 while (rs.next()){
                     dataList.add(new MyPassword(rs.getInt(1),id,rs.getString(2),rs.getString(3),rs.getString(4)));
                 }
