@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19efce69-8fff-4677-971c-5c3e1fe5d232" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Controller/CentralControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CentralControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CentralModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ModelListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ModelListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/MyPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/MyPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/CentralView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/CentralView.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,8 +24,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/View/CentralView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="215" column="60" lean-forward="true" selection-start-line="215" selection-start-column="60" selection-end-line="215" selection-end-column="60" />
+            <state relative-caret-position="482">
+              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7284#7285#0" expanded="true" />
+                <element signature="e#7333#7334#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/CentralModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,22 +81,23 @@
         <option value="$PROJECT_DIR$/src/Databass/AddNewUser.java" />
         <option value="$PROJECT_DIR$/src/Frame/SecondaryFrames/Registration.java" />
         <option value="$PROJECT_DIR$/src/View/LogIn.java" />
-        <option value="$PROJECT_DIR$/src/Model/ModelListener.java" />
         <option value="$PROJECT_DIR$/src/CSS/login_css" />
         <option value="$PROJECT_DIR$/src/View/Start.java" />
         <option value="$PROJECT_DIR$/src/CSS/Menu_css.css" />
         <option value="$PROJECT_DIR$/src/Frame/ViewPane.java" />
         <option value="$PROJECT_DIR$/src/CSS/View_css.css" />
         <option value="$PROJECT_DIR$/src/Start.java" />
-        <option value="$PROJECT_DIR$/src/Model/MyPassword.java" />
         <option value="$PROJECT_DIR$/src/View/LinePane.java" />
         <option value="$PROJECT_DIR$/src/View/Add.java" />
         <option value="$PROJECT_DIR$/src/CSS/LogIn.css" />
         <option value="$PROJECT_DIR$/src/View/Tips.java" />
         <option value="$PROJECT_DIR$/src/CSS/SecondaryFrame.css" />
-        <option value="$PROJECT_DIR$/src/Model/Database.java" />
         <option value="$PROJECT_DIR$/src/View/Register.java" />
         <option value="$PROJECT_DIR$/src/Controller/CentralControl.java" />
+        <option value="$PROJECT_DIR$/src/Model/MyPassword.java" />
+        <option value="$PROJECT_DIR$/src/Model/ModelListener.java" />
+        <option value="$PROJECT_DIR$/src/Model/Database.java" />
+        <option value="$PROJECT_DIR$/src/Model/CentralModel.java" />
         <option value="$PROJECT_DIR$/src/View/CentralView.java" />
       </list>
     </option>
@@ -114,7 +134,7 @@
               <item name="GetPass" type="b2602c69:ProjectViewProjectNode" />
               <item name="GetPass" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Materials" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GetPass" type="b2602c69:ProjectViewProjectNode" />
@@ -159,8 +179,8 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Start">
-    <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Model.Database" />
+    <configuration name="CentralModel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Model.CentralModel" />
       <module name="GetPass" />
       <extension name="coverage">
         <pattern>
@@ -228,7 +248,7 @@
       <list>
         <item itemvalue="Application.Start" />
         <item itemvalue="Application.LogIn_Frame" />
-        <item itemvalue="Application.Database" />
+        <item itemvalue="Application.CentralModel" />
         <item itemvalue="Application.ReadPass" />
         <item itemvalue="Application.Tip" />
       </list>
@@ -247,12 +267,12 @@
       <workItem from="1558115322223" duration="23470000" />
       <workItem from="1558282026851" duration="10926000" />
       <workItem from="1558295156124" duration="45000" />
-      <workItem from="1558318628346" duration="7343000" />
+      <workItem from="1558318628346" duration="8809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41784000" />
+    <option name="totallyTimeSpent" value="43250000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="862" y="75" width="1071" height="1261" extended-state="0" />
@@ -355,13 +375,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/ModelListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CSS/css" />
     <entry file="file://$PROJECT_DIR$/src/CSS/login_css" />
     <entry file="file://$PROJECT_DIR$/src/CSS/Menu_css.java" />
@@ -434,17 +447,6 @@
           <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/MyPassword.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding>
-            <element signature="e#1193#1194#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -541,10 +543,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Database.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/MyPassword.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1697">
-          <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/ModelListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/CentralModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -553,10 +569,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/CentralView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="215" column="60" lean-forward="true" selection-start-line="215" selection-start-column="60" selection-end-line="215" selection-end-column="60" />
+        <state relative-caret-position="482">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#7284#7285#0" expanded="true" />
+            <element signature="e#7333#7334#0" expanded="true" />
           </folding>
         </state>
       </provider>

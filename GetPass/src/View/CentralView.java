@@ -1,7 +1,16 @@
 package View;
 
+/**
+ * Author: Hao Li
+ * Date: 05/19,2019
+ * This is the view class
+ * It is the frame work
+ * build by JavaFX
+ */
+
+
 import Controller.CentralControl;
-import Model.Database;
+import Model.CentralModel;
 import Model.ModelListener;
 import Model.MyPassword;
 import javafx.geometry.Insets;
@@ -15,29 +24,30 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 
 public class CentralView implements ModelListener {
-    public Stage viewStage = new Stage();
-    public Stage LogStage = new Stage();
-    public Add addNewPass = new Add();
-    public Tips tips = new Tips();
-    public Register register = new Register();
+    public Stage viewStage = new Stage();// main frame to display the list of records
+    public Stage LogStage = new Stage(); // the logIn frame for log in windows
+    public Add addNewPass = new Add(); // Secondary frame to help user add new password record
+    public Tips tips = new Tips(); // Secondary frame to give user tips
+    public Register register = new Register(); // Secondary frame to help user register new account.
 
-    Button search = new Button("SEARCH");
-    Button all = new Button("ViewAll");
-    public Button left = new Button("←");
-    public Button right = new Button("→");
-    MenuItem add = new MenuItem("ADD NEW PASSWORD");
-    MenuItem deleteAll = new MenuItem("DELETE ALL PASSWORDS");
-    MenuItem quit = new MenuItem("QUIT");
+    public Button left = new Button("←"); // the go left page button
+    public Button right = new Button("→"); // the go right page button
+    public Label LogIn_message = new Label(); // the message label to give user message during log in
+    public TextField username_tx = new TextField(); // the textField for user name during log in
+    public PasswordField password_tx = new PasswordField(); // the textField for password during log in
+    public TextField search_tx = new TextField(); // the textField for search function
+    public ArrayList<MyPassword> viewListShow; // the list contained all password records for current user
 
+    CentralControl controller; // the controller for the system
+    CentralModel model; // the model for the system
+    Button search = new Button("SEARCH"); // the search button
+    Button all = new Button("ViewAll"); // the view all password records button
+    MenuItem add = new MenuItem("ADD NEW PASSWORD");// the add new passwords button
+    MenuItem deleteAll = new MenuItem("DELETE ALL PASSWORDS"); // the delete all password record button
+    MenuItem quit = new MenuItem("QUIT");// the quit the system button
+    BorderPane listViewPane; // the borderPane for view records part
 
-    BorderPane listViewPane;
-    CentralControl controller;
-    Database model;
-    public Label LogIn_message = new Label();
-    public TextField username_tx = new TextField();
-    public PasswordField password_tx = new PasswordField();
-    public TextField search_tx = new TextField();
-    public ArrayList<MyPassword> viewListShow;
+    
     public CentralView(){
         viewListShow = new ArrayList<>();
         VBox view_B = new VBox();
@@ -65,7 +75,7 @@ public class CentralView implements ModelListener {
 
         // TODO 在这里设置actions
     }
-    public void setModel(Database model){
+    public void setModel(CentralModel model){
         this.model = model;
     }
     /**
@@ -221,17 +231,7 @@ public class CentralView implements ModelListener {
     }
 
 
-
-
-
-
-
-
-
-
-
     public void modelChanged() {
-        //TODO 每次数据库改变，在这里重画中心的密码列表
         listViewPane.setCenter(Display());
     }
 

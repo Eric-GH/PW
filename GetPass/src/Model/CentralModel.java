@@ -1,20 +1,27 @@
 package Model;
 
+/**
+ * Author: Hao Li
+ * Date: 05/10,2019
+ * This class is the model class, most of function is work to
+ * exchange data between each tables in database
+ */
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-public class Database {
-    public Connection connection;
+public class CentralModel {
+    public Connection connection; // connection
     public boolean flag = false; // flag for each function's state
     public boolean used_check = false; // check new user name duplication.
     public int user_id = 0; // current user id
     public ArrayList<MyPassword> dataList; // list contained all password records
     public ModelListener subscriber;
-    public boolean search_flag = false;
-    String search_Aim = null;
+    public boolean search_flag = false; // check current viewList is on search or all records
+    String search_Aim = null; // current search target
 
     /**
      * Connect to local database

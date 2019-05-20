@@ -1,5 +1,5 @@
 import Controller.CentralControl;
-import Model.Database;
+import Model.CentralModel;
 import View.CentralView;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -10,7 +10,7 @@ public class Start extends Application {
     @Override
     public void start(Stage LoginStage) throws Exception {
         controller = new CentralControl();
-        Database model = new Database();
+        CentralModel model = new CentralModel();
         CentralView view = new CentralView();
 
         view.setController(controller);

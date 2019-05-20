@@ -1,6 +1,6 @@
 package Controller;
 
-import Model.Database;
+import Model.CentralModel;
 import Model.MyPassword;
 import View.CentralView;
 import javafx.event.ActionEvent;
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 
 public class CentralControl {
-    Database model;
+    CentralModel model;
     CentralView view;
     int current_user_ID=0;
     final int max = 14;
@@ -19,7 +19,7 @@ public class CentralControl {
     int start = 0;
     int end = 14;
 
-    public void setModel(Database model){
+    public void setModel(CentralModel model){
         this.model = model;
     }
 
