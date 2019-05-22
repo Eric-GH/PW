@@ -9,7 +9,7 @@ public class LinePane extends HBox {
     public TextArea name_area = new TextArea();
     public TextArea user_area = new TextArea();
     public TextArea pass_area = new TextArea();
-    public Button view_delete = new Button("DELETE");
+    public Button view_delete = new Button("⊝");
 
     /**
      * Construct to set up the elements in LinePane frame
@@ -20,12 +20,14 @@ public class LinePane extends HBox {
         user_area.setId("line_area");
         pass_area.setId("line_area");
         user_area.setEditable(false);
+        view_delete.setId("view_delete");
         name_area.setEditable(false);
         pass_area.setEditable(false);
-        HBox.setMargin(name_area,new Insets(0,0,0,15));
-        HBox.setMargin(user_area,new Insets(0,0,0,10));
-        HBox.setMargin(pass_area,new Insets(0,0,0,10));
-        HBox.setMargin(view_delete,new Insets(0,0,0,25));
+        HBox.setMargin(name_area,new Insets(0,0,0,40));
+        HBox.setMargin(user_area,new Insets(0,0,0,20));
+        HBox.setMargin(pass_area,new Insets(0,0,0,20));
+        HBox.setMargin(view_delete,new Insets(0,0,0,10));
+        view_delete.setPadding(new Insets(0,0,5,0));
         this.setPadding(new Insets(3,0,3,0));
         this.getStylesheets().add("./CSS/View_css.css");
         this.getChildren().addAll(name_area,user_area,pass_area,view_delete);

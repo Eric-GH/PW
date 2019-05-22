@@ -20,7 +20,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
 import java.util.ArrayList;
 
 public class CentralView implements ModelListener {
@@ -47,13 +46,13 @@ public class CentralView implements ModelListener {
     MenuItem quit = new MenuItem("QUIT");// the quit the system button
     BorderPane listViewPane; // the borderPane for view records part
 
-    
+
     public CentralView(){
         viewListShow = new ArrayList<>();
         VBox view_B = new VBox();
-        view_B.setPrefSize(600,600);
+        view_B.setId("VB");
         view_B.getChildren().addAll(Menu(),Function(),ListView());
-        Scene view_scene = new Scene(view_B,600,600);
+        Scene view_scene = new Scene(view_B,600,750);
         view_scene.getStylesheets().add("CSS/View_css.css");
         viewStage.setScene(view_scene);
         viewStage.setResizable(false);
@@ -110,13 +109,14 @@ public class CentralView implements ModelListener {
         func_top.setId("f_top");
         func_bot.setId("f_bot");
         search.setId("search");
-        all.setId("search");
+        all.setId("viewALl");
         left.setId("page");
         right.setId("page");
         search_tx.setId("s_field");
 
-        func_top.setPadding(new Insets(0,0,0,120));
-        HBox.setMargin(search,new Insets(0,0,0,10));
+        func_top.setPadding(new Insets(17,0,0,120));
+        HBox.setMargin(search,new Insets(0,0,0,-20));
+        HBox.setMargin(search_tx,new Insets(0,-10,0,0));
         HBox.setMargin(all,new Insets(0,0,0,10));
         HBox.setMargin(left,new Insets(2,0,0,10));
         HBox.setMargin(right,new Insets(2,0,0,500));
@@ -178,6 +178,7 @@ public class CentralView implements ModelListener {
             line.setUser_area(viewListShow.get(i).getNames());
             line.setPass_area(viewListShow.get(i).getPassword());
             line.view_delete.setOnAction(event -> controller.SingleDelete(viewListShow.get(m).getId()));
+            VBox.setMargin(line,new Insets(5,0,0,0));
             displayBox.getChildren().add(line);
         }
         return displayBox;
@@ -216,7 +217,8 @@ public class CentralView implements ModelListener {
         //reg.setOnAction(controller::test);
         con.setOnAction(controller::LogIn_submit);
 
-
+        user_name.setPadding(new Insets(0,0,0,15));
+        pass_word.setPadding(new Insets(0,0,0,15));
         HBox.setMargin(user_name,new Insets(0,0,0,55));
         HBox.setMargin(pass_word,new Insets(0,0,0,55));
         HBox.setMargin(reg,new Insets(0,0,10,25));

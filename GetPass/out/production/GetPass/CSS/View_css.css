@@ -1,6 +1,11 @@
+#VB{
+    -fx-pref-width: 600;
+}
+
 #mBox{
     -fx-pref-width: 500;
     -fx-pref-height: 25;
+
 }
 
 #mbtn{
@@ -17,32 +22,54 @@
 #f_top{
     -fx-pref-width: 500;
     -fx-pref-height: 70;
+    -fx-background-color: #00d2f3;
 }
 
 #f_bot{
     -fx-pref-width: 500;
     -fx-pref-height: 30;
+    -fx-background-color: #b1a24a;
 }
 
 #search{
     -fx-pref-width: 80;
     -fx-pref-height: 35;
+    -fx-background-color: #00a8e0;
+    -fx-background-insets: 0,1 1 1 0;
+    -fx-background-radius: 15;
 
 }
+
+#s_field{
+    -fx-pref-width: 260;
+    -fx-pref-height: 35;
+    -fx-background-insets: 0,1 0 1 1;
+    -fx-background-radius: 15;
+    -fx-background-color: #00a8e0;
+}
+
+#s_field:focused{
+    -fx-background-color: -fx-focus-color, -fx-background;
+}
+
+
+#viewALl{
+    -fx-pref-width: 80;
+    -fx-pref-height: 35;
+    -fx-background: #96bf48;
+}
+
 
 #page{
     -fx-pref-width: 40;
     -fx-pref-height: 25;
 }
 
-#s_field{
-    -fx-pref-width: 260;
-    -fx-pref-height: 35;
-}
-
 #LVP{
     -fx-pref-width: 500;
-    -fx-pref-height: 475;
+    -fx-pref-height: 623;
+    -fx-background-color: #96bf48;
+
 }
 #title{
     -fx-pref-width: 500;
@@ -71,4 +98,16 @@
 #displayBox{
     -fx-pref-width: 600;
     -fx-pref-height: 445;
+}
+
+#view_delete{
+    -fx-text-alignment: CENTER;
+    -fx-pref-width: 29;
+    -fx-pref-height: 25;
+    -fx-background-radius: 15;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill: red;
+    -fx-background-color: null;
+
 }
