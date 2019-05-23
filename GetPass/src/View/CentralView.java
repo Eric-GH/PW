@@ -14,11 +14,15 @@ import Model.CentralModel;
 import Model.ModelListener;
 import Model.MyPassword;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 import java.util.ArrayList;
 
@@ -29,8 +33,8 @@ public class CentralView implements ModelListener {
     public Tips tips = new Tips(); // Secondary frame to give user tips
     public Register register = new Register(); // Secondary frame to help user register new account.
 
-    public Button left = new Button("←"); // the go left page button
-    public Button right = new Button("→"); // the go right page button
+    public Button left = new Button(); // the go left page button
+    public Button right = new Button(); // the go right page button
     public Label LogIn_message = new Label(); // the message label to give user message during log in
     public TextField username_tx = new TextField(); // the textField for user name during log in
     public PasswordField password_tx = new PasswordField(); // the textField for password during log in
@@ -84,14 +88,13 @@ public class CentralView implements ModelListener {
     HBox Menu(){
         //TODO action
         HBox menuBox = new HBox();
-        MenuButton menuButton = new MenuButton("Menu");
-
-        menuBox.setId("mBox");
-        menuButton.setId("mbtn");
-
-        menuBox.setPadding(new Insets(0,0,0,10));
-        menuButton.getItems().addAll(add,deleteAll,quit);
-        menuBox.getChildren().addAll(menuButton);
+        MenuBar menuBar = new MenuBar();
+        Menu menu = new Menu("Menu");
+        menuBar.getMenus().addAll(menu);
+        menu.getItems().addAll(add,deleteAll,quit);
+        menuBar.setPadding(new Insets(0,-5,0,0));
+        HBox.setMargin(menuBar,new Insets(0,0,0,10));
+        menuBox.getChildren().addAll(menuBar);
         return menuBox;
     }
 
@@ -101,12 +104,30 @@ public class CentralView implements ModelListener {
      */
     BorderPane Function(){
         BorderPane funcPane = new BorderPane();
-        HBox func_top = new HBox();
+        BorderPane func_top = new BorderPane();
+
+        HBox Htop = new HBox();
         HBox func_bot = new HBox();
         //TextField search_tx = new TextField();
 
+
+
+        Double []d1 = new Double[]{0.0, 0.0, 0.0, 3.0, 0.5, 1.5};
+        Double []d2 = new Double[]{0.0, 0.0, 0.0, -3.0, -0.5, -1.5};
+        Polygon triangle1 = new Polygon();
+        Polygon triangle2 = new Polygon();
+        triangle1.getPoints().addAll(d1);
+        triangle2.getPoints().addAll(d2);
+        right.setShape(triangle1);
+        left.setShape(triangle2);
+
+
+
+
+
         funcPane.setId("func");
         func_top.setId("f_top");
+        Htop.setId("Htop");
         func_bot.setId("f_bot");
         search.setId("search");
         all.setId("viewALl");
@@ -114,13 +135,23 @@ public class CentralView implements ModelListener {
         right.setId("page");
         search_tx.setId("s_field");
 
-        func_top.setPadding(new Insets(17,0,0,120));
-        HBox.setMargin(search,new Insets(0,0,0,-20));
-        HBox.setMargin(search_tx,new Insets(0,-10,0,0));
-        HBox.setMargin(all,new Insets(0,0,0,10));
-        HBox.setMargin(left,new Insets(2,0,0,10));
-        HBox.setMargin(right,new Insets(2,0,0,500));
-        func_top.getChildren().addAll(search_tx,search,all);
+
+
+
+
+        Htop.getChildren().addAll(search_tx,search);
+        func_top.setPadding(new Insets(15,0,0,0));
+        BorderPane.setMargin(all,new Insets(0,-75,0,110));
+        BorderPane.setMargin(Htop,new Insets(0,0,0,50));
+        HBox.setMargin(search_tx,new Insets(0,0,0,0));
+        HBox.setMargin(search,new Insets(0,0,0,-30));
+        HBox.setMargin(left,new Insets(0,0,0,10));
+        HBox.setMargin(right,new Insets(0,0,0,500));
+
+        func_top.setCenter(Htop);
+        func_top.setLeft(all);
+
+
         func_bot.getChildren().addAll(left,right);
         funcPane.setCenter(func_top);
         funcPane.setBottom(func_bot);
@@ -212,9 +243,9 @@ public class CentralView implements ModelListener {
         reg.setId("log_btn");
         con.setId("log_btn");
 
-        reg.setOnAction(controller::OpenReg);
+        //reg.setOnAction(controller::OpenReg);
         //TODO 测试用
-        //reg.setOnAction(controller::test);
+        reg.setOnAction(controller::test);
         con.setOnAction(controller::LogIn_submit);
 
         user_name.setPadding(new Insets(0,0,0,15));

@@ -1,74 +1,159 @@
 #VB{
     -fx-pref-width: 600;
+    -fx-pref-height: 750;
+    -fx-background-image: url(/Materials/UofS.jpeg);
+    -fx-background-size: 600px 130px;
 }
+
+
+.menu-bar{
+    -fx-pref-width: 55;
+    -fx-pref-height: 25;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-background-color: linear-gradient(rgba(72,200,235,0.5),rgba(135,206,235,0.5));
+}
+
+.menu-bar:hover{
+
+    -fx-background-color: linear-gradient(rgba(135,206,235,0.5),rgba(72,200,235,0.5));
+}
+
+
+.menu{
+    -fx-pref-width: 55;
+    -fx-pref-height: 25;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-background-color: linear-gradient(rgba(72,200,235,0.5),rgba(135,206,235,0.5));
+}
+
+.menu:hover{
+
+    -fx-background-color: linear-gradient(rgba(135,206,235,0.5),rgba(72,200,235,0.5));
+}
+
+.menu .label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-text-alignment: CENTER;
+}
+.menu-item{
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-background-color: null;
+}
+
+.menu-item .label{
+    -fx-text-fill: rgba(30,144,255,1);
+}
+
+.menu-item:hover{
+    -fx-background-color: rgba(245,245,220,0.8);
+}
+
+.context-menu{
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-background-color: rgba(255,248,220,0.8);
+    -fx-border-color: rgba(255,210,0,1);
+}
+
 
 #mBox{
     -fx-pref-width: 500;
     -fx-pref-height: 25;
-
+    -fx-background: transparent;
 }
 
-#mbtn{
-    -fx-pref-width: 80;
-    -fx-pref-height: 25;
-}
 
 #func{
     -fx-pref-width: 500;
     -fx-pref-height: 100;
-
 }
 
 #f_top{
     -fx-pref-width: 500;
     -fx-pref-height: 70;
-    -fx-background-color: #00d2f3;
+    -fx-background-color:transparent;
 }
+
+#Htop{
+    -fx-pref-width: 340;
+    -fx-pref-height: 70;
+}
+
+
 
 #f_bot{
     -fx-pref-width: 500;
     -fx-pref-height: 30;
-    -fx-background-color: #b1a24a;
 }
 
 #search{
     -fx-pref-width: 80;
     -fx-pref-height: 35;
-    -fx-background-color: #00a8e0;
     -fx-background-insets: 0,1 1 1 0;
     -fx-background-radius: 15;
-
+    -fx-background-color: linear-gradient(rgb(255,215,0),rgb(255,155,0));
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6), 5, 0.0, 0, 1 );
+}
+#search:hover {
+    -fx-background-color: linear-gradient(rgb(255,155,0), rgb(255,215,0));
 }
 
-#s_field{
-    -fx-pref-width: 260;
-    -fx-pref-height: 35;
-    -fx-background-insets: 0,1 0 1 1;
-    -fx-background-radius: 15;
-    -fx-background-color: #00a8e0;
-}
-
-#s_field:focused{
-    -fx-background-color: -fx-focus-color, -fx-background;
-}
 
 
 #viewALl{
     -fx-pref-width: 80;
     -fx-pref-height: 35;
-    -fx-background: #96bf48;
+    -fx-background-radius: 15;
+    -fx-background-color: linear-gradient(rgb(255,215,0),rgb(255,155,0));
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6), 5, 0.0, 0, 1 );
 }
+#viewALl:hover{
+    -fx-background-color: linear-gradient(rgb(255,155,0), rgb(255,215,0));
+}
+
+
+
+#s_field{
+    -fx-pref-width: 280;
+    -fx-pref-height: 35;
+    -fx-min-height: 35;
+    -fx-max-height: 35;
+    -fx-border-radius: 15;
+    -fx-background-insets: 0,0 0 0 0;
+    -fx-border-insets:  0,0 0 0 0;
+    -fx-background-color: rgba(255,255,0,0.3);
+    -fx-background-radius: 15 ;
+    -fx-text-alignment: Center Center;
+
+}
+
+#s_field:focused{
+    -fx-background-color: rgba(255,255,255,0.8);
+}
+
 
 
 #page{
     -fx-pref-width: 40;
     -fx-pref-height: 25;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-background-color: linear-gradient(#a3a7a6,#94938f);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6), 5, 0.0, 0, 1 );
+}
+#page:hover{
+    -fx-background-color: linear-gradient(#94938f, #a3a7a6);
 }
 
 #LVP{
     -fx-pref-width: 500;
     -fx-pref-height: 623;
-    -fx-background-color: #96bf48;
+    -fx-background-image: url(/Materials/fengwo.jpeg);
+    -fx-background-size: 600px 625px;
 
 }
 #title{
