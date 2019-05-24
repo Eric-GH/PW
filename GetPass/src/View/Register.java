@@ -24,7 +24,7 @@ public class Register {
     public Register(){
         Scene regScene = new Scene(setRegBox());
 
-        regScene.getStylesheets().add("./CSS/SecondaryFrame.css");
+        regScene.getStylesheets().add("CSS/SecondaryFrame.css");
         regWindows.setScene(regScene);
     }
 

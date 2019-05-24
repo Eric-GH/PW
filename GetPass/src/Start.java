@@ -21,7 +21,7 @@ public class Start extends Application {
 
 
         Scene scene = new Scene(view.LogIn(),400,300);
-        scene.getStylesheets().add("./CSS/LogIn.css");
+        scene.getStylesheets().add("CSS/LogIn.css");
         view.LogStage.setScene(scene);
         view.LogStage.show();
     }

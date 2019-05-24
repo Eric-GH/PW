@@ -38,7 +38,7 @@ public class LinePane extends HBox {
         HBox.setMargin(view_delete,new Insets(0,0,0,10));
         view_delete.setPadding(new Insets(0,0,5,0));
         //this.setPadding(new Insets(3,0,3,0));
-        this.getStylesheets().add("./CSS/View_css.css");
+        this.getStylesheets().add("CSS/View_css.css");
         this.getChildren().addAll(frontSep,name_area,user_area,pass_area,view_delete,backSep);
     }
     /*

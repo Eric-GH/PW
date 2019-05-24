@@ -28,7 +28,7 @@ public class Add {
 
     public Add(){
         Scene scene = new Scene(setVBox());
-        scene.getStylesheets().add("./CSS/SecondaryFrame.css");
+        scene.getStylesheets().add("CSS/SecondaryFrame.css");
         Addwindows.setScene(scene);
     }
 

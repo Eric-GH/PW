@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="GetPass:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="19efce69-8fff-4677-971c-5c3e1fe5d232" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/GetPass_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/CSS/LogIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GetPass/CSS/LogIn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/CSS/SecondaryFrame.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GetPass/CSS/SecondaryFrame.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/CSS/View_css.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GetPass/CSS/View_css.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/Controller/CentralControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GetPass/Controller/CentralControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/View/Add.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GetPass/View/Add.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/View/CentralView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GetPass/View/CentralView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/View/LinePane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GetPass/View/LinePane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/View/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GetPass/View/Register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GetPass/View/Tips.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GetPass/View/Tips.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CSS/LogIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/LogIn.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CSS/SecondaryFrame.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/SecondaryFrame.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CSS/View_css.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/View_css.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CentralControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CentralControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/CentralModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CentralModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Add.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/CentralView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/CentralView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/LinePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/LinePane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Tips.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Tips.java" afterDir="false" />
@@ -38,20 +34,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CSS/SecondaryFrame.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+            <state relative-caret-position="135">
+              <caret line="9" column="17" selection-end-line="154" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/CentralModel.java">
+        <entry file="file://$PROJECT_DIR$/src/CSS/View_css.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CSS/LogIn.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="278" column="39" selection-start-line="278" selection-start-column="39" selection-end-line="278" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="390">
+              <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -59,29 +57,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Start.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/CentralControl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="120" column="23" lean-forward="true" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
+            <state relative-caret-position="345">
+              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3153#3154#0" expanded="true" />
-                <element signature="e#3202#3203#0" expanded="true" />
-                <element signature="e#5283#5284#0" expanded="true" />
-                <element signature="e#5313#5314#0" expanded="true" />
-                <element signature="e#6555#6556#0" expanded="true" />
-                <element signature="e#6596#6597#0" expanded="true" />
-                <element signature="e#6636#6637#0" expanded="true" />
-                <element signature="e#6678#6679#0" expanded="true" />
-                <element signature="e#6739#6740#0" expanded="true" />
-                <element signature="e#6776#6777#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,8 +69,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/CentralView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-127">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="374">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/LinePane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/Register.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/Tips.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/Add.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+            <state relative-caret-position="252">
+              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,27 +164,27 @@
         <option value="$PROJECT_DIR$/src/View/Start.java" />
         <option value="$PROJECT_DIR$/src/CSS/Menu_css.css" />
         <option value="$PROJECT_DIR$/src/Frame/ViewPane.java" />
-        <option value="$PROJECT_DIR$/src/Start.java" />
         <option value="$PROJECT_DIR$/src/Model/MyPassword.java" />
         <option value="$PROJECT_DIR$/src/Model/ModelListener.java" />
         <option value="$PROJECT_DIR$/src/Model/Database.java" />
         <option value="$PROJECT_DIR$/src/CSS/temp.css" />
-        <option value="$PROJECT_DIR$/src/View/LinePane.java" />
-        <option value="$PROJECT_DIR$/src/CSS/View_css.css" />
-        <option value="$PROJECT_DIR$/src/CSS/LogIn.css" />
-        <option value="$PROJECT_DIR$/src/View/Tips.java" />
-        <option value="$PROJECT_DIR$/src/View/Register.java" />
-        <option value="$PROJECT_DIR$/src/CSS/SecondaryFrame.css" />
         <option value="$PROJECT_DIR$/src/Model/CentralModel.java" />
         <option value="$PROJECT_DIR$/src/View/CentralView.java" />
-        <option value="$PROJECT_DIR$/src/View/Add.java" />
         <option value="$PROJECT_DIR$/src/Controller/CentralControl.java" />
+        <option value="$PROJECT_DIR$/src/CSS/LogIn.css" />
+        <option value="$PROJECT_DIR$/src/CSS/SecondaryFrame.css" />
+        <option value="$PROJECT_DIR$/src/Start.java" />
+        <option value="$PROJECT_DIR$/src/View/Add.java" />
+        <option value="$PROJECT_DIR$/src/View/LinePane.java" />
+        <option value="$PROJECT_DIR$/src/View/Register.java" />
+        <option value="$PROJECT_DIR$/src/View/Tips.java" />
+        <option value="$PROJECT_DIR$/src/CSS/View_css.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="663" />
-    <option name="y" value="47" />
+    <option name="x" value="481" />
+    <option name="y" value="26" />
     <option name="width" value="1361" />
     <option name="height" value="1261" />
   </component>
@@ -196,25 +214,7 @@
               <item name="GetPass" type="b2602c69:ProjectViewProjectNode" />
               <item name="GetPass" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GetPass" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GetPass" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="CSS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GetPass" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GetPass" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Materials" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GetPass" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GetPass" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GetPass" type="b2602c69:ProjectViewProjectNode" />
@@ -234,8 +234,8 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Materials" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -351,18 +351,18 @@
       <workItem from="1558391408454" duration="10390000" />
       <workItem from="1558580360237" duration="22410000" />
       <workItem from="1558647382208" duration="280000" />
-      <workItem from="1558667918498" duration="3802000" />
+      <workItem from="1558667918498" duration="5547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80316000" />
+    <option name="totallyTimeSpent" value="82061000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="663" y="47" width="1361" height="1261" extended-state="0" />
+    <frame x="481" y="26" width="1361" height="1261" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20470053" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20470053" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -373,7 +373,7 @@
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.283148" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.283148" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.39948675" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -392,6 +392,37 @@
       <window_info anchor="right" id="Maven" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20470053" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="0" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" />
+      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.283148" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.39948675" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32934132" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -450,98 +481,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CSS/temp.css" />
-    <entry file="file://$PROJECT_DIR$/src/View/LinePane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CSS/View_css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="89" column="23" lean-forward="true" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CSS/LogIn.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Materials/fengwo.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Tips.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CSS/SecondaryFrame.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CentralModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="278" column="39" selection-start-line="278" selection-start-column="39" selection-end-line="278" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Add.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/CentralView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/CentralControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="120" column="23" lean-forward="true" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
+        <state relative-caret-position="450">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3153#3154#0" expanded="true" />
@@ -558,16 +504,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/CSS/SecondaryFrame.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-end-line="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/CentralModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="278" column="39" selection-start-line="278" selection-start-column="39" selection-end-line="278" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Add.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/CentralView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/LinePane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Tips.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CSS/View_css.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CSS/LogIn.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>GetPass:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

@@ -19,7 +19,7 @@ public class Tips {
     public Tips(){
         Scene TipsScence = new Scene(setBox());
         tipsWindows.setScene(TipsScence);
-        TipsScence.getStylesheets().add("./CSS/SecondaryFrame.css");
+        TipsScence.getStylesheets().add("CSS/SecondaryFrame.css");
     }
 
     public void setController(CentralControl controller){
