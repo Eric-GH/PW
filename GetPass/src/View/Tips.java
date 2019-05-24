@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class Tips {
@@ -20,6 +21,7 @@ public class Tips {
         Scene TipsScence = new Scene(setBox());
         tipsWindows.setScene(TipsScence);
         TipsScence.getStylesheets().add("CSS/SecondaryFrame.css");
+        tipsWindows.initModality(Modality.APPLICATION_MODAL);
     }
 
     public void setController(CentralControl controller){

@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class Add {
@@ -29,6 +30,7 @@ public class Add {
     public Add(){
         Scene scene = new Scene(setVBox());
         scene.getStylesheets().add("CSS/SecondaryFrame.css");
+        Addwindows.initModality(Modality.APPLICATION_MODAL);
         Addwindows.setScene(scene);
     }
 
