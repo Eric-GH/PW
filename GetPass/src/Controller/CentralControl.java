@@ -223,9 +223,21 @@ public class CentralControl {
      * @param event pressed
      */
     public void SearchRec(ActionEvent event){
-        model.SearchRead(current_user_ID,view.search_tx.getText());
-        initialList();
-        view.modelChanged();
+        if (!view.search_tx.getText().isEmpty()){
+            model.SearchRead(current_user_ID,view.search_tx.getText());
+            initialList();
+            view.modelChanged();
+        }
+    }
+
+    /**
+     * Action for search key pressed
+     * @param event pressed
+     */
+    public void SearchKeyPress(KeyEvent event){
+        if (event.getCode() == KeyCode.ENTER){
+            SearchRec(null);
+        }
     }
 
     /**
