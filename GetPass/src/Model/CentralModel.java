@@ -3,8 +3,8 @@ package Model;
 /**
  * Author: Hao Li
  * Date: 05/10,2019
- * This class is the model class, most of function is work to
- * exchange data between each tables in database
+ * This class is the model class, most of function is work for
+ * exchange data between database and the program
  */
 
 import java.sql.Connection;
