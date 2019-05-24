@@ -39,13 +39,12 @@
     -fx-pref-width: 150;
     -fx-pref-height: 30;
     -fx-background-radius: 15;
-    -fx-background-insets: 0,1,1,1,1;
 }
 
 #lgMessage{
     -fx-pref-width: 400;
     -fx-pref-height: 40;
-    -fx-alignment: CENTER;
+    -fx-alignment: TOP_CENTER;
 }
 
 #log_btn{

@@ -14,14 +14,11 @@ import Model.CentralModel;
 import Model.ModelListener;
 import Model.MyPassword;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 import java.util.ArrayList;
@@ -86,7 +83,6 @@ public class CentralView implements ModelListener {
      * @return menuBox
      */
     HBox Menu(){
-        //TODO action
         HBox menuBox = new HBox();
         MenuBar menuBar = new MenuBar();
         Menu menu = new Menu("Menu");
@@ -147,6 +143,7 @@ public class CentralView implements ModelListener {
         HBox.setMargin(search,new Insets(0,0,0,-30));
         HBox.setMargin(left,new Insets(0,0,0,10));
         HBox.setMargin(right,new Insets(0,0,0,500));
+        search_tx.setPadding(new Insets(0,35,0,35));
 
         func_top.setCenter(Htop);
         func_top.setLeft(all);
@@ -171,30 +168,36 @@ public class CentralView implements ModelListener {
         return listViewPane;
     }
 
-    HBox titelLine(){
+
+    VBox titelLine(){
          /*
         Create elements
          */
-        HBox titleLine = new HBox();
+        VBox titleLine = new VBox();
+        Separator titleSep = new Separator();
+        HBox titleHBox = new HBox();
         Label listName = new Label("NAME");
         Label listUser = new Label("USERNAME");
         Label listPass = new Label("PASSWORD");
         titleLine.setId("title");
+        titleHBox.setId("titleHBox");
         listName.setId("title_element");
         listUser.setId("title_element");
         listPass.setId("title_element");
+        titleSep.setId("titleSeparator");
         /*
         set position && margin
          */
-        HBox.setMargin(listPass,new Insets(0,0,0,80));
-        HBox.setMargin(listName,new Insets(0,0,0,40));
-        HBox.setMargin(listUser,new Insets(0,0,0,80));
+        HBox.setMargin(listName,new Insets(5,0,0,50));
+        HBox.setMargin(listUser,new Insets(5,0,0,45));
+        HBox.setMargin(listPass,new Insets(5,0,0,45));
+        VBox.setMargin(titleSep,new Insets(0,0,0,33));
 
         /*
         ADD up all
          */
-        titleLine.getChildren().addAll(listName,listUser,listPass);
-
+        titleHBox.getChildren().addAll(listName,listUser,listPass);
+        titleLine.getChildren().addAll(titleHBox,titleSep);
         return titleLine;
     }
 
@@ -212,6 +215,10 @@ public class CentralView implements ModelListener {
             VBox.setMargin(line,new Insets(5,0,0,0));
             displayBox.getChildren().add(line);
         }
+        Separator botSep = new Separator();
+        botSep.setId("titleSeparator");
+        VBox.setMargin(botSep,new Insets(-2,0,0,33));
+        displayBox.getChildren().add(botSep);
         return displayBox;
     }
 
@@ -243,9 +250,9 @@ public class CentralView implements ModelListener {
         reg.setId("log_btn");
         con.setId("log_btn");
 
-        //reg.setOnAction(controller::OpenReg);
+        reg.setOnAction(controller::OpenReg);
         //TODO 测试用
-        reg.setOnAction(controller::test);
+        //reg.setOnAction(controller::test);
         con.setOnAction(controller::LogIn_submit);
 
         user_name.setPadding(new Insets(0,0,0,15));

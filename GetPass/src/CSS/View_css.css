@@ -125,9 +125,12 @@
     -fx-border-radius: 15;
     -fx-background-insets: 0,0 0 0 0;
     -fx-border-insets:  0,0 0 0 0;
-    -fx-background-color: rgba(255,255,0,0.3);
+    -fx-background-color: rgba(255,255,0,0.5);
     -fx-background-radius: 15 ;
-    -fx-text-alignment: Center Center;
+    -fx-alignment: Center;
+    -fx-font-size: 18px;
+    -fx-font-weight: BOLD;
+    -fx-text-fill: rgba(0,0,0,1);
 
 }
 
@@ -155,20 +158,51 @@
     -fx-background-image: url(/Materials/fengwo.jpeg);
     -fx-background-size: 600px 625px;
 
+
 }
 #title{
+    -fx-pref-width: 500;
+    -fx-pref-height: 35;
+}
+
+#titleHBox{
     -fx-pref-width: 500;
     -fx-pref-height: 30;
 }
 
-#title_element{
-    -fx-pref-width: 80;
-    -fx-pref-height: 25;
-    -fx-alignment: CENTER;
+
+#titleSeparator{
+    -fx-pref-width: 544;
+    -fx-pref-height: 5;
+    -fx-max-width: 544;
 }
 
-#LinePane{
+
+.separator .line{
+    -fx-border-color: red;
+    -fx-border-width: 2;
+}
+
+#title_element{
+    -fx-pref-width: 125;
+    -fx-pref-height: 25;
+    -fx-alignment: CENTER;
+    -fx-text-fill: rgba(0,0,0,1);
+    -fx-font-weight: BOLD;
+    -fx-font-size: 15px;
+}
+
+
+
+#displayBox{
     -fx-pref-width: 600;
+    -fx-pref-height: 445;
+}
+
+
+
+#LinePane{
+    -fx-pref-width: 500;
     -fx-pref-height: 30;
 }
 
@@ -180,14 +214,19 @@
     -fx-wrap-text: true;
 }
 
-#displayBox{
-    -fx-pref-width: 600;
-    -fx-pref-height: 445;
+
+
+#lineSeparator{
+    -fx-pref-width: 10;
+    -fx-pref-height: 40;
+    -fx-max-width: 10;
+    -fx-max-height: 40;
 }
+
 
 #view_delete{
     -fx-text-alignment: CENTER;
-    -fx-pref-width: 29;
+    -fx-pref-width: 30;
     -fx-pref-height: 25;
     -fx-background-radius: 15;
     -fx-font-weight: bold;

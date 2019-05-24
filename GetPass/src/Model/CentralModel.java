@@ -29,9 +29,9 @@ public class CentralModel {
      */
     public Connection Connect(){
         // parameters of DriverManager.
-        String DbURL = "jdbc:postgresql://localhost:5432/postgres";
-        String DbUserName = "postgres";
-        String DbUserPass = "lns945";
+        String DbURL = "jdbc:postgresql://pw.c5jisp09zfos.ca-central-1.rds.amazonaws.com:5432/postgres";
+        String DbUserName = "ericpostgresql";
+        String DbUserPass = "ericpostgresql";
         // try the connection
         try {
             Class.forName("org.postgresql.Driver");
@@ -314,4 +314,5 @@ public class CentralModel {
     private  void notifySubscribers(){
         this.subscriber.modelChanged();
     }
+
 }

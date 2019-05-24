@@ -23,6 +23,7 @@ public class Register {
 
     public Register(){
         Scene regScene = new Scene(setRegBox());
+
         regScene.getStylesheets().add("./CSS/SecondaryFrame.css");
         regWindows.setScene(regScene);
     }
@@ -62,8 +63,8 @@ public class Register {
         /*
         Set up margin
          */
-        HBox.setMargin(regcancel,new Insets(0,0,0,20));
-        HBox.setMargin(regconfirm,new Insets(0,0,0,100));
+        HBox.setMargin(regcancel,new Insets(0,0,0,25));
+        HBox.setMargin(regconfirm,new Insets(0,0,0,90));
         VBox.setMargin(reguser,new Insets(10,0,0,0));
         VBox.setMargin(reguser_tx,new Insets(0,0,0,55));
         VBox.setMargin(regpass,new Insets(15,0,0,0));
@@ -71,7 +72,7 @@ public class Register {
         VBox.setMargin(regmail,new Insets(15,0,0,0));
         VBox.setMargin(regmail_tx,new Insets(0,0,0,55));
         VBox.setMargin(regMessage,new Insets(10,0,0,0));
-        VBox.setMargin(regH,new Insets(20,0,0,0));
+        VBox.setMargin(regH,new Insets(5,0,0,0));
 
         regH.getChildren().addAll(regcancel,regconfirm);
         regVBox.getChildren().addAll(title,reguser,reguser_tx,regpass,regpass_tx,regmail,regmail_tx,regMessage,regH);

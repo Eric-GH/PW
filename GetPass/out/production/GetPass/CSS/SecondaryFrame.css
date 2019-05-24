@@ -2,6 +2,9 @@
 #vbox{
     -fx-pref-width: 300;
     -fx-pref-height: 400;
+    -fx-background-image: url(/Materials/background.jpeg);
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
 }
 
 #hbox{
@@ -11,8 +14,19 @@
 
 #title_mgs{
     -fx-pref-width: 300;
-    -fx-pref-height: 60;
+    -fx-pref-height: 80;
     -fx-alignment: CENTER;
+    -fx-font-size: 30px;
+    -fx-font-family: "Comic Sans MS";
+    -fx-fill: #818181;
+    -fx-effect: innershadow( three-pass-box , rgba(0,255,255,0.8) , 6, 0.0 , 0 , 2 );
+}
+
+#warning_mgs{
+    -fx-pref-width: 300;
+    -fx-pref-height: 30;
+    -fx-alignment: CENTER;
+    -fx-font-weight:normal;
 }
 
 #labels{
@@ -38,12 +52,14 @@
 #TipsBox{
     -fx-pref-width: 300;
     -fx-pref-height: 100;
+    -fx-background-color: #89ba16;
 }
 
 #warningLabel{
     -fx-pref-width: 300;
     -fx-pref-height: 70;
     -fx-alignment: CENTER;
+    -fx-font-family: "Arial";
 }
 
 #tipsBtn{
@@ -55,25 +71,33 @@
 #regVBox{
     -fx-pref-width: 300;
     -fx-pref-height: 400;
+    -fx-background-image: url(/Materials/background.jpeg);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
 }
 
 
 #regtitle{
     -fx-pref-width: 300;
-    -fx-pref-height: 60;
+    -fx-pref-height: 80;
     -fx-alignment: CENTER;
+    -fx-font-size: 30px;
+    -fx-font-family: "Comic Sans MS";
+    -fx-fill: #818181;
+    -fx-effect: innershadow( three-pass-box , rgba(0,255,255,0.8) , 6, 0.0 , 0 , 2 );
 }
 
 #regLabels{
     -fx-pref-width: 300;
     -fx-pref-height: 25;
-    -fx-alignment: CENTER;
+
+
 }
 
 
 #regmessage{
     -fx-pref-width: 300;
-    -fx-pref-height: 50;
+    -fx-pref-height: 40;
     -fx-alignment: CENTER;
 }
 
@@ -92,8 +116,6 @@
 
 
 
-
-
 #regHBox{
     -fx-pref-width: 300;
     -fx-pref-height: 30;
@@ -106,6 +128,28 @@
 #regbtn{
     -fx-pref-width: 80;
     -fx-pref-height: 30;
+
+}
+.button{
+    -fx-font-family: "Courier";
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-background-color: linear-gradient(#87ceeb,	#00bfff);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6), 5, 0.0, 0, 1 );
+}
+.button:hover{
+    -fx-background-color: linear-gradient(#00bfff,#ffebcd,	#00bfff);
 }
 
 
+.text-field{
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-alignment: Center;
+}
+
+.label{
+    -fx-alignment: CENTER;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: BOLD;
+}

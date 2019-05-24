@@ -2,10 +2,13 @@ package Controller;
 
 import Model.CentralModel;
 import Model.MyPassword;
+import View.Add;
 import View.CentralView;
 import javafx.event.ActionEvent;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
 
@@ -63,6 +66,7 @@ public class CentralControl {
         view.register.reguser_tx.setText(null);
         view.register.regpass_tx.setText(null);
         view.register.regmail_tx.setText(null);
+        view.register.regMessage.setText(null);
         view.register.regWindows.close();
     }
     public void LogIn_reg(ActionEvent event){
@@ -81,6 +85,8 @@ public class CentralControl {
                     view.register.regmail_tx.setText(null);
                     view.register.regWindows.close();
                     view.tips.tipMessage.setText("Congratulations! Register Successfully!");
+                    view.tips.delete_flag=false;
+                    view.tips.tipMessage.setTextFill(Color.BLACK);
                     view.tips.tipsWindows.show();
 
                 }
@@ -102,31 +108,49 @@ public class CentralControl {
 
 
     public void AddNewRec(ActionEvent event){
-        model.addPass(current_user_ID,view.addNewPass.address_TX.getText(),view.addNewPass.user_TX.getText(),view.addNewPass.password_TX.getText());
-        if (model.flag){
-            view.addNewPass.Addwindows.close();
-            view.addNewPass.address_TX.setText(null);
-            view.addNewPass.user_TX.setText(null);
-            view.addNewPass.password_TX.setText(null);
-            view.tips.tipMessage.setText("Add New Password Successfully");
-            view.tips.delete_flag=false;
-            view.tips.tipsWindows.show();
-
-
+        if (view.addNewPass.address_TX.getText().isEmpty()){
+            view.addNewPass.warning.setText("Password name cannot be Empty");
+        }
+        else if (view.addNewPass.user_TX.getText().isEmpty()){
+            view.addNewPass.warning.setText("User name cannot be Empty");
+        }
+        else if (view.addNewPass.password_TX.getText().isEmpty()){
+            view.addNewPass.warning.setText("Password cannot be Empty");
         }
         else {
-            view.addNewPass.warning.setText("Error, Please Try again");
-        }
-        initialList();
+            model.addPass(current_user_ID,view.addNewPass.address_TX.getText(),view.addNewPass.user_TX.getText(),view.addNewPass.password_TX.getText());
+            if (model.flag){
+                view.addNewPass.Addwindows.close();
+                view.addNewPass.address_TX.setText("");
+                view.addNewPass.user_TX.setText("");
+                view.addNewPass.password_TX.setText("");
+                view.addNewPass.warning.setText("");
+                view.tips.tipMessage.setText("Add New Password Successfully");
+                view.tips.delete_flag=false;
+                view.tips.tipMessage.setTextFill(Color.BLACK);
+                view.tips.tipsWindows.show();
 
+            }
+            else {
+                view.addNewPass.warning.setText("Error, Please Try again");
+            }
+        }
+
+
+        initialList();
     }
 
     public void CancelAdd(ActionEvent event){
+        view.addNewPass.address_TX.setText("");
+        view.addNewPass.user_TX.setText("");
+        view.addNewPass.password_TX.setText("");
+        view.addNewPass.warning.setText("");
         view.addNewPass.Addwindows.close();
     }
 
     public void OpenDeleteConfirmFrame(ActionEvent event){
         view.tips.delete_flag = true;
+        view.tips.tipMessage.setTextFill(Color.RED);
         view.tips.tipMessage.setText("Are you sure to delete ALL password records?");
         view.tips.tipsWindows.show();
     }
@@ -254,6 +278,7 @@ public class CentralControl {
      */
     public void test(ActionEvent event){
         view.LogStage.close();
+        current_user_ID = 1;
         view.viewStage.show();
     }
 

@@ -16,15 +16,15 @@ public class Add {
     Button cancel;
     Button submit;
     CentralControl control;
-    VBox vBox = new VBox();
+    VBox vBox;
 
     /*
         Create each TextField elements
          */
-    public TextField address_TX = new TextField();
-    public TextField user_TX = new TextField();
-    public TextField password_TX = new TextField();
-    public Label warning = new Label();
+    public TextField address_TX;
+    public TextField user_TX;
+    public TextField password_TX;
+    public Label warning;
 
     public Add(){
         Scene scene = new Scene(setVBox());
@@ -44,7 +44,11 @@ public class Add {
      * @return VBox
      */
     VBox setVBox(){
-
+        vBox= new VBox();
+        address_TX = new TextField();
+        user_TX = new TextField();
+        password_TX = new TextField();
+        warning = new Label();
         /*
         Create labels for VBox
          */
@@ -60,7 +64,7 @@ public class Add {
         vBox.setId("vbox");
         hBox.setId("hbox");
         title.setId("title_mgs");
-        warning.setId("title_mgs");
+        warning.setId("warning_mgs");
         address.setId("labels");
         newUserName.setId("labels");
         newPassWord.setId("labels");
@@ -86,7 +90,7 @@ public class Add {
         VBox.setMargin(user_TX,new Insets(0,0,0,50));
         VBox.setMargin(warning,new Insets(10,0,0,0));
         VBox.setMargin(address_TX,new Insets(0,0,0,50));
-        VBox.setMargin(hBox,new Insets(20,0,0,0));
+        VBox.setMargin(hBox,new Insets(10,0,0,0));
         VBox.setMargin(password_TX,new Insets(0,0,0,50));
         HBox.setMargin(cancel,new Insets(0,0,0,20));
         HBox.setMargin(submit,new Insets(0,0,0,100));

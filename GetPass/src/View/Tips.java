@@ -15,7 +15,7 @@ public class Tips {
     public boolean delete_flag = false;
     CentralControl controller;
 
-    VBox tipVBox = new VBox();
+    public VBox tipVBox = new VBox();
     public Tips(){
         Scene TipsScence = new Scene(setBox());
         tipsWindows.setScene(TipsScence);
