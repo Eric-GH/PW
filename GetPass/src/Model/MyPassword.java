@@ -3,19 +3,19 @@ package Model;
 /**
  * Author: Hao Li
  * Date: 04/27,2019
- * This class is defined new type of variable
+ * This class is defined new type to contain the password records
  */
 public class MyPassword {
-    public int id;
-    public int manage_id;
-    public String address;
-    public String names;
-    public String password;
+    private int id;
+    private int manage_id;
+    private String address;
+    private String names;
+    private String password;
 
     /*
     Construct
      */
-    public MyPassword(int id, int manage_id,String address, String names, String password){
+    MyPassword(int id, int manage_id,String address, String names, String password){
         this.id = id;
         this.manage_id = manage_id;
         this.address = address;
@@ -26,7 +26,6 @@ public class MyPassword {
     /*
      * Geter and Setter for all variables
      */
-
     public int getId() {
         return id;
     }
