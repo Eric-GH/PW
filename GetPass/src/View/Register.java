@@ -1,5 +1,12 @@
 package View;
 
+
+/**
+ * Author: Hao Li
+ * Date: 05/17,2019
+ * The Secondary frame for user register a new account
+ * JavaFX
+ */
 import Controller.CentralControl;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -13,7 +20,9 @@ import javafx.stage.Stage;
 
 public class Register {
 
-    CentralControl controller;
+    /*
+    Components for the frame
+     */
     public Stage regWindows = new Stage();
     public Label regMessage;
     public TextField reguser_tx = new TextField();
@@ -21,22 +30,33 @@ public class Register {
     public TextField regmail_tx = new TextField();
     Button regcancel = new Button("CANCEL");
     Button regconfirm = new Button("CONFIRM");
+    CentralControl controller;
 
-    public Register(){
+    /**
+     * Construct for the frame
+     */
+    Register(){
         Scene regScene = new Scene(setRegBox());
-
         regScene.getStylesheets().add("CSS/SecondaryFrame.css");
         regWindows.setScene(regScene);
-        regWindows.initModality(Modality.APPLICATION_MODAL);
+        regWindows.initModality(Modality.APPLICATION_MODAL);// Set this frame always be the top and primary when called
     }
 
-    public void setController(CentralControl controller){
+    /**
+     * Set up the controller
+     * @param controller Central controller
+     */
+    void setController(CentralControl controller){
         this.controller = controller;
         regcancel.setOnAction(controller::reg_Cancel);
         regconfirm.setOnAction(controller::LogIn_reg);
     }
 
 
+    /**
+     * Set up the VBox
+     * @return regVBox
+     */
     VBox setRegBox(){
         /*
         Set up elements
@@ -49,6 +69,9 @@ public class Register {
         regMessage = new Label();
         HBox regH = new HBox();
 
+        /*
+        Set up the id of each elements
+         */
         regVBox.setId("regVBox");
         title.setId("regtitle");
         reguser.setId("regLabels");
@@ -78,10 +101,7 @@ public class Register {
 
         regH.getChildren().addAll(regcancel,regconfirm);
         regVBox.getChildren().addAll(title,reguser,reguser_tx,regpass,regpass_tx,regmail,regmail_tx,regMessage,regH);
-
-
-
-
+        
         return regVBox;
     }
 
