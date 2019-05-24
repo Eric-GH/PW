@@ -3,7 +3,7 @@ package View;
 /**
  * Author: Hao Li
  * Date: 05/19,2019
- * The Secondary frame for add new password records
+ * The Secondary frame for show one line of the password record
  * JavaFX
  */
 import javafx.geometry.Insets;
