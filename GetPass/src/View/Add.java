@@ -1,5 +1,11 @@
 package View;
 
+/**
+ * Author: Hao Li
+ * Date: 05/19,2019
+ * The Secondary frame for add new password records
+ * JavaFX
+ */
 
 import Controller.CentralControl;
 import javafx.geometry.Insets;
@@ -13,11 +19,11 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class Add {
-    public Stage Addwindows = new Stage();
-    Button cancel;
-    Button submit;
-    CentralControl control;
-    VBox vBox;
+    public Stage Addwindows = new Stage();//Stage for add new password frame
+    Button cancel; // cancel adding button
+    Button submit; // submit the new password
+    CentralControl control; // central controller
+    VBox vBox; // VBox layout for components
 
     /*
         Create each TextField elements
@@ -27,10 +33,13 @@ public class Add {
     public TextField password_TX;
     public Label warning;
 
+    /**
+     * Constructor for add frame
+     */
     public Add(){
         Scene scene = new Scene(setVBox());
         scene.getStylesheets().add("CSS/SecondaryFrame.css");
-        Addwindows.initModality(Modality.APPLICATION_MODAL);
+        Addwindows.initModality(Modality.APPLICATION_MODAL);// Set this frame always be the top and primary when called
         Addwindows.setScene(scene);
     }
 
@@ -62,7 +71,9 @@ public class Add {
         submit = new Button("Submit");
         HBox hBox = new HBox();
 
-
+        /*
+        Set up the id for each components
+         */
         vBox.setId("vbox");
         hBox.setId("hbox");
         title.setId("title_mgs");
@@ -75,12 +86,6 @@ public class Add {
         password_TX.setId("fields");
         cancel.setId("new_btn");
         submit.setId("new_btn");
-        /*
-        Set up the size of VBox and each elements
-         */
-        vBox.setPrefSize(300,400);
-
-
 
         /*
           Set up the margin of the VBox
@@ -96,9 +101,6 @@ public class Add {
         VBox.setMargin(password_TX,new Insets(0,0,0,50));
         HBox.setMargin(cancel,new Insets(0,0,0,20));
         HBox.setMargin(submit,new Insets(0,0,0,100));
-
-
-
 
         /*
          ADD up all elements to the VBox
