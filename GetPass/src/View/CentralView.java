@@ -3,12 +3,9 @@ package View;
 /**
  * Author: Hao Li
  * Date: 05/19,2019
- * This is the view class
- * It is the frame work
- * build by JavaFX
+ * This is the main view frame class
+ * JavaFX
  */
-
-
 import Controller.CentralControl;
 import Model.CentralModel;
 import Model.ModelListener;
@@ -48,6 +45,9 @@ public class CentralView implements ModelListener {
     BorderPane listViewPane; // the borderPane for view records part
 
 
+    /**
+     * Construct to build the Central View
+     */
     public CentralView(){
         viewListShow = new ArrayList<>();
         VBox view_B = new VBox();
@@ -59,6 +59,10 @@ public class CentralView implements ModelListener {
         viewStage.setResizable(false);
     }
 
+    /**
+     * Set up the controller to each secondary frame and the action of current frame
+     * @param controller Central Frame
+     */
     public void setController(CentralControl controller){
         this.controller = controller;
         addNewPass.setController(controller);
@@ -72,12 +76,17 @@ public class CentralView implements ModelListener {
         left.setOnAction(controller::PageLeft);
         right.setOnAction(controller::PageRight);
         password_tx.setOnKeyPressed(controller::KeyPress);
-
-        // TODO 在这里设置actions
     }
+
+    /**
+     * Set up the model for the frame
+     * @param model Central Model
+     */
     public void setModel(CentralModel model){
         this.model = model;
     }
+
+
     /**
      * The main pane for the menu bar
      * @return menuBox
@@ -101,13 +110,13 @@ public class CentralView implements ModelListener {
     BorderPane Function(){
         BorderPane funcPane = new BorderPane();
         BorderPane func_top = new BorderPane();
-
         HBox Htop = new HBox();
         HBox func_bot = new HBox();
-        //TextField search_tx = new TextField();
 
 
-
+        /*
+         Create triangle shapes for the buttons
+         */
         Double []d1 = new Double[]{0.0, 0.0, 0.0, 3.0, 0.5, 1.5};
         Double []d2 = new Double[]{0.0, 0.0, 0.0, -3.0, -0.5, -1.5};
         Polygon triangle1 = new Polygon();
@@ -118,9 +127,9 @@ public class CentralView implements ModelListener {
         left.setShape(triangle2);
 
 
-
-
-
+        /*
+        Set up the id for the elements
+         */
         funcPane.setId("func");
         func_top.setId("f_top");
         Htop.setId("Htop");
@@ -132,10 +141,9 @@ public class CentralView implements ModelListener {
         search_tx.setId("s_field");
 
 
-
-
-
-        Htop.getChildren().addAll(search_tx,search);
+        /*
+        Set up the margin
+         */
         func_top.setPadding(new Insets(15,0,0,0));
         BorderPane.setMargin(all,new Insets(0,-75,0,110));
         BorderPane.setMargin(Htop,new Insets(0,0,0,50));
@@ -145,15 +153,20 @@ public class CentralView implements ModelListener {
         HBox.setMargin(right,new Insets(0,0,0,500));
         search_tx.setPadding(new Insets(0,35,0,35));
 
+
+        /*
+        Add up each elements
+         */
+        Htop.getChildren().addAll(search_tx,search);
         func_top.setCenter(Htop);
         func_top.setLeft(all);
-
-
         func_bot.getChildren().addAll(left,right);
         funcPane.setCenter(func_top);
         funcPane.setBottom(func_bot);
+
         return funcPane;
     }
+
 
     /**
      * The main pane for display the list of passwords
@@ -162,13 +175,16 @@ public class CentralView implements ModelListener {
     BorderPane ListView(){
         listViewPane = new BorderPane();
         listViewPane.setId("LVP");
-
         listViewPane.setTop(titelLine());
         listViewPane.setCenter(Display());
         return listViewPane;
     }
 
 
+    /**
+     * The title line of display the passwors records
+     * @return titleLine
+     */
     VBox titelLine(){
          /*
         Create elements
@@ -201,7 +217,11 @@ public class CentralView implements ModelListener {
         return titleLine;
     }
 
-    public VBox Display(){
+    /**
+     * The main display layout
+     * @return displayBox
+     */
+    private VBox Display(){
         VBox displayBox = new VBox();
         displayBox.setId("displayBox");
         LinePane line;
@@ -224,7 +244,7 @@ public class CentralView implements ModelListener {
 
 
     /**
-     * This is the logIn frame
+     * The logIn frame
      * @return LogInBox
      */
     public VBox LogIn(){
@@ -232,6 +252,10 @@ public class CentralView implements ModelListener {
         HBox userLine = new HBox();
         HBox passLine = new HBox();
         HBox btnLine = new HBox();
+
+        /*
+        Set up the id for each elements
+         */
         LogInBox.setId("log_main");
         userLine.setId("u_pHBox");
         passLine.setId("u_pHBox");
@@ -250,11 +274,15 @@ public class CentralView implements ModelListener {
         reg.setId("log_btn");
         con.setId("log_btn");
 
+        /*
+        Set up the actions for login buttons
+         */
         reg.setOnAction(controller::OpenReg);
-        //TODO 测试用
-        //reg.setOnAction(controller::test);
         con.setOnAction(controller::LogIn_submit);
 
+        /*
+        Set up the margin
+         */
         user_name.setPadding(new Insets(0,0,0,15));
         pass_word.setPadding(new Insets(0,0,0,15));
         HBox.setMargin(user_name,new Insets(0,0,0,55));
@@ -262,6 +290,9 @@ public class CentralView implements ModelListener {
         HBox.setMargin(reg,new Insets(0,0,10,25));
         HBox.setMargin(con,new Insets(0,0,10,70));
 
+        /*
+        Add up all elements
+         */
         userLine.getChildren().addAll(user_name,username_tx);
         passLine.getChildren().addAll(pass_word,password_tx);
         btnLine.getChildren().addAll(reg,con);
@@ -271,6 +302,9 @@ public class CentralView implements ModelListener {
     }
 
 
+    /**
+     * The listener to tell the view there is change in model.
+     */
     public void modelChanged() {
         listViewPane.setCenter(Display());
     }
