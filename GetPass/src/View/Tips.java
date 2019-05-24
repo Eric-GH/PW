@@ -1,5 +1,11 @@
 package View;
 
+/**
+ * Author: Hao Li
+ * Date: 05/20,2019
+ * The Secondary frame for give user tips
+ * JavaFX
+ */
 import Controller.CentralControl;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -12,23 +18,35 @@ import javafx.stage.Stage;
 public class Tips {
     public Stage tipsWindows = new Stage();
     public Label tipMessage = new Label();
-    public Button confirm = new Button("CONFIRM");
-    public boolean delete_flag = false;
+    private Button confirm = new Button("CONFIRM");
+    public boolean delete_flag = false; // check if this tips for delete all password records
+    private VBox tipVBox = new VBox();
     CentralControl controller;
 
-    public VBox tipVBox = new VBox();
-    public Tips(){
+    /**
+     * Construct for the Tips frame
+     */
+    Tips(){
         Scene TipsScence = new Scene(setBox());
         tipsWindows.setScene(TipsScence);
         TipsScence.getStylesheets().add("CSS/SecondaryFrame.css");
         tipsWindows.initModality(Modality.APPLICATION_MODAL);
     }
 
-    public void setController(CentralControl controller){
+    /**
+     * Set the controller
+     * @param controller Central controller
+     */
+    void setController(CentralControl controller){
         this.controller = controller;
         confirm.setOnAction(controller::tipsFunction);
 
     }
+
+    /**
+     * Create the VBox for components
+     * @return tipVBox
+     */
     VBox setBox(){
         /*
         Set up the elements in the Frame
