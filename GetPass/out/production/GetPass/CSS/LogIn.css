@@ -1,8 +1,13 @@
+/*
+   Author: Hao Li
+   Date: 05/21,2019
+   LogIn frame CSS
+ */
 #log_main{
     -fx-pref-width: 400;
     -fx-pref-height: 300;
     -fx-background-position: CENTER CENTER;
-    -fx-background-image: url(/Materials/banner.jpeg) no-repeat;
+    -fx-background-image: url(/Materials/LogInbg.jpeg) no-repeat;
     -fx-background-size: 800px 700px;
 }
 

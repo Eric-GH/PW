@@ -101,7 +101,7 @@ public class Register {
 
         regH.getChildren().addAll(regcancel,regconfirm);
         regVBox.getChildren().addAll(title,reguser,reguser_tx,regpass,regpass_tx,regmail,regmail_tx,regMessage,regH);
-        
+
         return regVBox;
     }
 

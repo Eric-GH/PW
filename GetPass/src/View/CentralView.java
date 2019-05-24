@@ -23,7 +23,7 @@ import java.util.ArrayList;
 public class CentralView implements ModelListener {
     public Stage viewStage = new Stage();// main frame to display the list of records
     public Stage LogStage = new Stage(); // the logIn frame for log in windows
-    public Add addNewPass = new Add(); // Secondary frame to help user add new password record
+    public Add addNewPass = new Add(); // Secondary frame to help user all new password record
     public Tips tips = new Tips(); // Secondary frame to give user tips
     public Register register = new Register(); // Secondary frame to help user register new account.
 
@@ -33,14 +33,14 @@ public class CentralView implements ModelListener {
     public TextField username_tx = new TextField(); // the textField for user name during log in
     public PasswordField password_tx = new PasswordField(); // the textField for password during log in
     public TextField search_tx = new TextField(); // the textField for search function
-    public ArrayList<MyPassword> viewListShow; // the list contained all password records for current user
+    public ArrayList<MyPassword> viewListShow; // the list contained addnew password records for current user
 
     CentralControl controller; // the controller for the system
     CentralModel model; // the model for the system
     Button search = new Button("SEARCH"); // the search button
-    Button all = new Button("ViewAll"); // the view all password records button
-    MenuItem add = new MenuItem("ADD NEW PASSWORD");// the add new passwords button
-    MenuItem deleteAll = new MenuItem("DELETE ALL PASSWORDS"); // the delete all password record button
+    Button addnew = new Button("ADD"); // the view addnew password records button
+    MenuItem all = new MenuItem("View All Passwords");// the all new passwords button
+    MenuItem deleteAll = new MenuItem("DELETE ALL PASSWORDS"); // the delete addnew password record button
     MenuItem quit = new MenuItem("QUIT");// the quit the system button
     BorderPane listViewPane; // the borderPane for view records part
 
@@ -68,14 +68,16 @@ public class CentralView implements ModelListener {
         addNewPass.setController(controller);
         tips.setController(controller);
         register.setController(controller);
-        add.setOnAction(controller::OpenAddFrame);
+        all.setOnAction(controller::ShowAllRec);
         deleteAll.setOnAction(controller::OpenDeleteConfirmFrame);
         quit.setOnAction(controller::QuitSys);
         search.setOnAction(controller::SearchRec);
-        all.setOnAction(controller::ShowAllRec);
+        addnew.setOnAction(controller::OpenAddFrame);
         left.setOnAction(controller::PageLeft);
         right.setOnAction(controller::PageRight);
         password_tx.setOnKeyPressed(controller::KeyPress);
+        search_tx.setOnKeyPressed(controller::SearchKeyPress);
+        username_tx.setOnKeyPressed(controller::KeyPress);
     }
 
     /**
@@ -94,12 +96,18 @@ public class CentralView implements ModelListener {
     HBox Menu(){
         HBox menuBox = new HBox();
         MenuBar menuBar = new MenuBar();
+        MenuBar viewBar = new MenuBar();
+        Menu setview = new Menu("View");
         Menu menu = new Menu("Menu");
-        menuBar.getMenus().addAll(menu);
-        menu.getItems().addAll(add,deleteAll,quit);
+        menuBar.getMenus().add(menu);
+        viewBar.getMenus().add(setview);
+        menu.getItems().addAll(deleteAll,quit);
+        setview.getItems().add(all);
         menuBar.setPadding(new Insets(0,-5,0,0));
+        viewBar.setPadding(new Insets(0,0,0,1));
         HBox.setMargin(menuBar,new Insets(0,0,0,10));
-        menuBox.getChildren().addAll(menuBar);
+        HBox.setMargin(viewBar,new Insets(0,0,0,465));
+        menuBox.getChildren().addAll(menuBar,viewBar);
         return menuBox;
     }
 
@@ -135,7 +143,7 @@ public class CentralView implements ModelListener {
         Htop.setId("Htop");
         func_bot.setId("f_bot");
         search.setId("search");
-        all.setId("viewALl");
+        addnew.setId("viewALl");
         left.setId("page");
         right.setId("page");
         search_tx.setId("s_field");
@@ -145,7 +153,7 @@ public class CentralView implements ModelListener {
         Set up the margin
          */
         func_top.setPadding(new Insets(15,0,0,0));
-        BorderPane.setMargin(all,new Insets(0,-75,0,110));
+        BorderPane.setMargin(addnew,new Insets(0,-75,0,110));
         BorderPane.setMargin(Htop,new Insets(0,0,0,50));
         HBox.setMargin(search_tx,new Insets(0,0,0,0));
         HBox.setMargin(search,new Insets(0,0,0,-30));
@@ -159,7 +167,7 @@ public class CentralView implements ModelListener {
          */
         Htop.getChildren().addAll(search_tx,search);
         func_top.setCenter(Htop);
-        func_top.setLeft(all);
+        func_top.setLeft(addnew);
         func_bot.getChildren().addAll(left,right);
         funcPane.setCenter(func_top);
         funcPane.setBottom(func_bot);
@@ -210,7 +218,7 @@ public class CentralView implements ModelListener {
         VBox.setMargin(titleSep,new Insets(0,0,0,33));
 
         /*
-        ADD up all
+        ADD up addnew
          */
         titleHBox.getChildren().addAll(listName,listUser,listPass);
         titleLine.getChildren().addAll(titleHBox,titleSep);
@@ -291,7 +299,7 @@ public class CentralView implements ModelListener {
         HBox.setMargin(con,new Insets(0,0,10,70));
 
         /*
-        Add up all elements
+        Add up addnew elements
          */
         userLine.getChildren().addAll(user_name,username_tx);
         passLine.getChildren().addAll(pass_word,password_tx);

@@ -20,9 +20,9 @@ public class CentralControl {
     private CentralModel model;
     private CentralView view;
     private int current_user_ID=0;
-    private final int max = 14;
+    private final int max = 15;
     private int start = 0;
-    private int end = 14;
+    private int end = 15;
 
 
     /**
@@ -197,6 +197,20 @@ public class CentralControl {
         view.addNewPass.Addwindows.close();
     }
 
+
+    /**
+     * Add up the key event for add new password records
+     * @param event
+     */
+    public void AddKeyPress(KeyEvent event){
+        if (event.getCode() == KeyCode.ENTER){
+            AddNewRec(null);
+        }
+
+    }
+
+
+
     /**
      * The action for open new frame ask user delete the all password records
      * @param event pressed
@@ -257,9 +271,9 @@ public class CentralControl {
      * @param event pressed
      */
     public void PageLeft(ActionEvent event){
-        start = start -14;
-        end = end-14;
-        if (start!=0 && start>=14){
+        start = start -15;
+        end = end-15;
+        if (start!=0 && start>=15){
             setLeftDisable(false);
             setRightDisable(false);
         }else {
@@ -274,8 +288,8 @@ public class CentralControl {
      * @param event pressed
      */
     public void PageRight(ActionEvent event){
-        start = start + 14;
-        end = end + 14;
+        start = start + 15;
+        end = end + 15;
 
         if (model.dataList.size()>end){
             setList(start,end);
@@ -325,7 +339,7 @@ public class CentralControl {
      */
     void initialParameter(){
         start=0;
-        end = 14;
+        end = 15;
     }
 
     /**
@@ -350,7 +364,7 @@ public class CentralControl {
      * @return length
      */
     Boolean CheckInitialLength(ArrayList<MyPassword> list){
-        return list.size()>14;
+        return list.size()>15;
     }
 
 

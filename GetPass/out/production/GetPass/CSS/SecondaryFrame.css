@@ -1,9 +1,12 @@
+/*
+   Author: Hao Li
+   Date: 05/21,2019
+   Add, Register and Tips CSS
+ */
 #vbox{
     -fx-pref-width: 300;
     -fx-pref-height: 400;
-    -fx-background-image: url(/Materials/background.jpeg);
-    -fx-border-radius: 15;
-    -fx-background-radius: 15;
+    -fx-background-color:#f8dfc2;
 }
 
 #hbox{
@@ -51,7 +54,7 @@
 #TipsBox{
     -fx-pref-width: 300;
     -fx-pref-height: 100;
-    -fx-background-color: #89ba16;
+    -fx-background-color: rgba(255,250,205,1);
 }
 
 #warningLabel{
@@ -70,9 +73,7 @@
 #regVBox{
     -fx-pref-width: 300;
     -fx-pref-height: 400;
-    -fx-background-image: url(/Materials/background.jpeg);
-    -fx-background-radius: 15;
-    -fx-border-radius: 15;
+    -fx-background-color:#f8dfc2;
 }
 
 
@@ -119,7 +120,6 @@
     -fx-pref-width: 300;
     -fx-pref-height: 30;
 }
-
 
 
 

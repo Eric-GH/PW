@@ -19,7 +19,7 @@ public class Tips {
     public Stage tipsWindows = new Stage();
     public Label tipMessage = new Label();
     private Button confirm = new Button("CONFIRM");
-    public boolean delete_flag = false; // check if this tips for delete all password records
+    public boolean delete_flag = false; // check if this tips for delete addnew password records
     private VBox tipVBox = new VBox();
     CentralControl controller;
 

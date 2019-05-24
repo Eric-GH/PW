@@ -3,7 +3,7 @@ package View;
 /**
  * Author: Hao Li
  * Date: 05/19,2019
- * The Secondary frame for add new password records
+ * The Secondary frame for all new password records
  * JavaFX
  */
 
@@ -19,9 +19,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class Add {
-    public Stage Addwindows = new Stage();//Stage for add new password frame
-    Button cancel; // cancel adding button
-    Button submit; // submit the new password
+    public Stage Addwindows = new Stage();//Stage for all new password frame
+    private Button cancel; // cancel adding button
+    private Button submit; // submit the new password
     CentralControl control; // central controller
     VBox vBox; // VBox layout for components
 
@@ -34,7 +34,7 @@ public class Add {
     public Label warning;
 
     /**
-     * Constructor for add frame
+     * Constructor for all frame
      */
     public Add(){
         Scene scene = new Scene(setVBox());
@@ -43,10 +43,17 @@ public class Add {
         Addwindows.setScene(scene);
     }
 
-    public void setController(CentralControl controller){
+    /**
+     * set controller
+     * @param controller Central controller
+     */
+    void setController(CentralControl controller){
         this.control = controller;
         submit.setOnAction(controller::AddNewRec);
         cancel.setOnAction(controller::CancelAdd);
+        address_TX.setOnKeyPressed(controller::AddKeyPress);
+        user_TX.setOnKeyPressed(controller::AddKeyPress);
+        password_TX.setOnKeyPressed(controller::AddKeyPress);
 
     }
 
@@ -103,7 +110,7 @@ public class Add {
         HBox.setMargin(submit,new Insets(0,0,0,100));
 
         /*
-         ADD up all elements to the VBox
+         ADD up addnew elements to the VBox
          */
         hBox.getChildren().addAll(cancel,submit);
         vBox.getChildren().addAll(title,address,address_TX,newUserName,user_TX,newPassWord,password_TX,warning,hBox);

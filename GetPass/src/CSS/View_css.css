@@ -1,10 +1,12 @@
 /*
-    Main Frame CSS part
+   Author: Hao Li
+   Date: 05/21,2019
+   Central View CSS
  */
 #VB{
     -fx-pref-width: 600;
     -fx-pref-height: 750;
-    -fx-background-image: url(/Materials/UofS.jpeg);
+    -fx-background-image: url(/Materials/functionBarbg.jpeg);
     -fx-background-size: 600px 130px;
 }
 
@@ -49,6 +51,7 @@
 
 .menu-item .label{
     -fx-text-fill: rgba(30,144,255,1);
+    -fx-alignment: CENTER;
 }
 
 .menu-item:hover{
@@ -128,7 +131,7 @@
     -fx-border-radius: 15;
     -fx-background-insets: 0,0 0 0 0;
     -fx-border-insets:  0,0 0 0 0;
-    -fx-background-color: rgba(255,255,0,0.5);
+    -fx-background-color: rgba(255,228,181,0.5);
     -fx-background-radius: 15 ;
     -fx-alignment: Center;
     -fx-font-size: 18px;
@@ -148,17 +151,17 @@
     -fx-pref-height: 25;
     -fx-border-radius: 10;
     -fx-background-radius: 10;
-    -fx-background-color: linear-gradient(#a3a7a6,#94938f);
+    -fx-background-color: linear-gradient(#87cefa,#00ff7f);
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6), 5, 0.0, 0, 1 );
 }
 #page:hover{
-    -fx-background-color: linear-gradient(#94938f, #a3a7a6);
+    -fx-background-color: linear-gradient(#00ff7f,#87cefa);
 }
 
 #LVP{
     -fx-pref-width: 500;
     -fx-pref-height: 623;
-    -fx-background-image: url(/Materials/fengwo.jpeg);
+    -fx-background-image: url(/Materials/displaybg.jpeg);
     -fx-background-size: 600px 625px;
 
 
@@ -182,7 +185,7 @@
 
 
 .separator .line{
-    -fx-border-color: red;
+    -fx-border-color: rgb(100,149,237);
     -fx-border-width: 2;
 }
 
@@ -238,22 +241,3 @@
     -fx-background-color: null;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-Secondary Frame CSS part
- */
-
