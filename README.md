@@ -3,8 +3,8 @@
 This project help user save all passwords they have. User can view their password records, add new password record in it, search specific password record, delete single password record and delete all the records. The main purpose for me to create such project is to practice the MVC pattern.
 
 ## Installation
-The **environment** to execute the project should be **JDK 8** or **above**. 
-User can **down** the **GetPass.jar** file to run the project. 
+The **environment** to execute the project should be **JDK 8** or **above**.  
+User can **down** the **GetPass.jar** file to run the project.  
 To make the test easier, there is a **username "test"** and **password "test"** already exist in the database.
 
 ## Architecture
