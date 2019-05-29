@@ -13,8 +13,7 @@ The project build by MVC (model-view-controller) pattern
 <center>  
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
-src="https://github.com/Eric-GH/PW/blob/master/PrevPic/mvcpic.png?raw=true">  
-<br>  
+src="https://github.com/Eric-GH/PW/blob/master/PrevPic/mvcpic.png?raw=true">   
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;  
 display: inline-block;  
 color: #999;  
@@ -25,8 +24,7 @@ padding: 2px;">MVC example with main classes for each part</div>
 <center>  
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
-src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(5).png?raw=true">  
-<br>  
+src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(5).png?raw=true">   
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;  
 display: inline-block;  
 color: #999;  
@@ -38,8 +36,7 @@ padding: 2px;">Log In Windows</div>
 <center>  
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
-src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(4).png?raw=true">  
-<br>  
+src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(4).png?raw=true">   
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;  
 display: inline-block;  
 color: #999;  
@@ -51,8 +48,7 @@ padding: 2px;">Registration Windows</div>
 <center>  
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
-src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(1).png?raw=true">  
-<br>  
+src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(1).png?raw=true">   
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;  
 display: inline-block;  
 color: #999;  
@@ -89,7 +85,6 @@ padding: 2px;">Function Menus</div>
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
 src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(8).png?raw=true">  
-<br>  
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;  
 display: inline-block;  
 color: #999;  
