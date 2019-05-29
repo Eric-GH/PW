@@ -20,11 +20,10 @@ src="https://github.com/Eric-GH/PW/blob/master/PrevPic/mvcpic.png?raw=true">
 
 ## Primary Function Example
 <center>  
-<p align="center">
-	<img style="border-radius: 0.5125em;  
-	box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
-	src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(5).png?raw=true"
-</p>     
+
+<img style="border-radius: 0.5125em;  
+box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
+src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(5).png?raw=true"    
 <p align="center">
 	Log In Windows
 </p>  
@@ -36,10 +35,9 @@ src="https://github.com/Eric-GH/PW/blob/master/PrevPic/mvcpic.png?raw=true">
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
 src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(4).png?raw=true">   
-<div style="color:orange; border-bottom: 1px solid #d9d9d9;  
-display: inline-block;  
-color: #999;  
-padding: 2px;">Registration Windows</div>  
+<p align="center">
+Registration Windows
+</p>  
 </center>
 
 <br></br>
@@ -48,10 +46,9 @@ padding: 2px;">Registration Windows</div>
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
 src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(1).png?raw=true">   
-<div style="color:orange; border-bottom: 1px solid #d9d9d9;  
-display: inline-block;  
-color: #999;  
-padding: 2px;">View Windows</div>  
+<p align="center">
+View Windows
+</p>  
 </center>
 
 <br></br>
@@ -60,10 +57,9 @@ padding: 2px;">View Windows</div>
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
 src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(3).png?raw=true">    
-<div style="color:orange; border-bottom: 1px solid #d9d9d9;  
-display: inline-block;  
-color: #999;  
-padding: 2px;">Add new Password Record</div>  
+<p align="center">
+Add new Password Record
+</p>  
 </center>
 
 <br></br>
@@ -72,10 +68,9 @@ padding: 2px;">Add new Password Record</div>
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
 src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(7).png?raw=true">    
-<div style="color:orange; border-bottom: 1px solid #d9d9d9;  
-display: inline-block;  
-color: #999;  
-padding: 2px;">Function Menus</div>  
+<p align="center">
+Function Menus
+</p>  
 </center>
 
 <br></br>
@@ -84,9 +79,8 @@ padding: 2px;">Function Menus</div>
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
 src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(8).png?raw=true">  
-<div style="color:orange; border-bottom: 1px solid #d9d9d9;  
-display: inline-block;  
-color: #999;  
-padding: 2px;">Delete All Password Records</div>  
+<p align="center">
+Delete All Password Records
+</p>  
 </center>
 
