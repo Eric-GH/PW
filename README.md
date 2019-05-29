@@ -10,12 +10,11 @@ To make the test easier, there is a **username "test"** and **password "test"** 
 ## Architecture
 
 The project build by MVC (model-view-controller) pattern
-<p align="center">  
+
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
 src="https://github.com/Eric-GH/PW/blob/master/PrevPic/mvcpic.png?raw=true">   
 <p align="center">MVC example with main classes for each part</p>  
-</p>
 
 ## Primary Function Example
 <p align="center">  
