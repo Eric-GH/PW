@@ -14,10 +14,7 @@ The project build by MVC (model-view-controller) pattern
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
 src="https://github.com/Eric-GH/PW/blob/master/PrevPic/mvcpic.png?raw=true">   
-<p align="center" style="color:orange; border-bottom: 1px solid #d9d9d9;  
-display: inline-block;  
-color: #999;  
-padding: 2px;">MVC example with main classes for each part</p>  
+<p align="center">MVC example with main classes for each part</p>  
 </p>
 
 ## Primary Function Example
