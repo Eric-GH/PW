@@ -64,8 +64,7 @@ padding: 2px;">View Windows</div>
 <center>  
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
-src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(3).png?raw=true">  
-<br>  
+src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(3).png?raw=true">    
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;  
 display: inline-block;  
 color: #999;  
@@ -77,13 +76,14 @@ padding: 2px;">Add new Password Record</div>
 <center>  
 <img style="border-radius: 0.5125em;  
 box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
-src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(7).png?raw=true">  
-<br>  
+src="https://github.com/Eric-GH/PW/blob/master/PrevPic/Blank%20Diagram%20(7).png?raw=true">    
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;  
 display: inline-block;  
 color: #999;  
 padding: 2px;">Function Menus</div>  
 </center>
+
+<br></br>
 
 <center>  
 <img style="border-radius: 0.5125em;  
